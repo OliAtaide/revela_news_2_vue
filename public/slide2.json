@@ -1,0 +1,9 @@
+{
+  "table": [
+    "Um valor de 0 é alocado para um parâmetro normal saudável.",
+    "Um valor de 3 para um parâmetro é conhecido como pontuação vermelha.",
+    "As pontuações de cada parâmetro individual são registradas no gráfico de observação do NEWS 2 usando uma marca ou cruz.",
+    "É recomendado que você escreva o valor das pontuações vermelhas no gráfico.",
+    "Sob nenhuma circustância, as escalas de SpO2 devem ser usadas para o único pacienete."
+  ]
+}

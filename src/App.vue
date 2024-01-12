@@ -1,30 +1,47 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
+  <nav-bar />
+
+  <main>
+    <div class="game py-3">
+      <div class="container">
+        <div class="game-card d-flex flex-column">
+          <nav class="navbar game-menu p-3">
+            <div class="navbar-brand">
+              <h1>Instruções do curso</h1>
+            </div>
+            <div class="ms-auto navbar-nav nav-pagination d-flex flex-row">
+              <router-link class="nav-link" to="/">Home</router-link>
+              <router-link class="nav-link" to="/1">1</router-link>
+              <router-link class="nav-link" to="/2">2</router-link>
+              <router-link class="nav-link" to="/3">3</router-link>
+              <router-link class="nav-link" to="/4">4</router-link>
+              <router-link class="nav-link" to="/estudo-de-caso">
+                Estudo de Caso
+              </router-link>
+              <router-link class="nav-link" to="/resumo"> Resumo </router-link>
+            </div>
+          </nav>
+          <router-view />
+        </div>
+      </div>
+    </div>
+  </main>
 </template>
 
+<script>
+import NavBar from "@/components/NavBar";
+import { register } from "swiper/element/bundle";
+
+register();
+
+export default {
+  components: {
+    NavBar,
+  },
+};
+</script>
+
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
-}
+@import "./assets/style.scss";
+@import "./assets/health-icons/style.scss"; //Here i add extra "./"(current directory)
 </style>

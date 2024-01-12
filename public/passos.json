@@ -1,0 +1,37 @@
+[
+  {
+    "titulo": "Medir",
+    "icone": "clipboard-pulse-outline ",
+    "texto": [
+      "No primeiro passo, você deverá medir e documentar a pontuação de cada um dos seis parâmetros fisiológicos que compôem o NEWS 2."
+    ]
+  },
+  {
+    "titulo": "Documentar",
+    "icone": "file-sign",
+    "texto": [
+        "No segundo passo, você deve registrar a pontuação de cada um dos seis parâmetros fisiológicos no cartão de observação do NEWS 2.-"
+    ]
+  },
+  {
+    "titulo": "Calcular",
+    "icone": "calculator-variant-outline",
+    "texto": [
+      "No terceiro passo, você deve somar toda a pontuação dos seis parâmetro fisiológicos para calcular o toal de pontos do NEWS 2.",
+      "Após, você deve verificar se algum dos seis paarâmentos possui pontuação 3."
+    ]
+  },
+  {
+    "titulo": "Identificar",
+    "icone": "clipboard-text-search-outline",
+    "texto": [
+      "No quarto e último passo, com base nos cálculos realizados, você será capaz de identificar o que gera o disparo correto da resposta clínica no que tange:"
+    ],
+    "lista": [
+      "À urgência de resposta;",
+      "À competência clínica do respondente;",
+      "À frequência exigida do monitoramento clínico;",
+      "Às configurações clínicas mais apropriadas para cuidados contínuos."
+    ]
+  }
+]
