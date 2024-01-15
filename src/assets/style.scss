@@ -98,11 +98,12 @@ body {
     background-color: transparent;
     border: none;
     font-weight: 500;
-    color: #265b88;
+    color: #265b88 !important;
+    background-color: white !important;
     align-items: center;
     display: flex;
     gap: 0.5em;
-    border-radius: 0;
+    border-radius: 0 !important;
 }
 
 .footer {
@@ -267,81 +268,6 @@ svg {
     text-align: center;
 }
 
-.balao {
-    border-radius: 8px;
-    border: 1px solid black;
-    padding: 0.5em;
-    position: relative;
-}
-
-.balao:before {
-    content: " ";
-    position: absolute;
-    width: 0;
-    height: 0;
-}
-
-.balao:after {
-    content: " ";
-    position: absolute;
-    width: 0;
-    height: 0;
-}
-
-.balao-1::before {
-    left: calc(50% - 10px);
-    right: auto;
-    bottom: auto;
-    top: -20px;
-    border: 10px solid;
-    border-color: transparent transparent black;
-}
-
-.balao-1::after {
-    left: calc(50% - 9.5px);
-    right: auto;
-    bottom: auto;
-    top: -18px;
-    border: 9px solid;
-    border-color: transparent transparent white;
-}
-
-.balao-3::before {
-    left: auto;
-    right: 10%;
-    bottom: -20px;
-    top: auto;
-    border: 10px solid;
-    border-color: black transparent transparent;
-}
-
-.balao-3::after {
-    left: auto;
-    right: calc(10% + 0.5px);
-    bottom: -17px;
-    top: auto;
-    border: 9px solid;
-    border-color: white transparent transparent;
-}
-
-.balao-4::before {
-    right: auto;
-    left: 10%;
-    bottom: -20px;
-    top: auto;
-    border: 10px solid;
-    border-color: black transparent transparent;
-}
-
-.balao-4::after {
-    right: auto;
-    left: calc(10% + 0.5px);
-    bottom: -17px;
-    top: auto;
-    border: 9px solid;
-    border-color: white transparent transparent;
-}
-
 swiper-container,
 swiper-slide {
     width: 100%;
@@ -460,31 +386,7 @@ swiper-slide {
     row-gap: 1em;
 }
 
-.row_nc {
-    button {
-        aspect-ratio: 1/1;
-        width: 100%;
 
-        .text {
-            display: none;
-        }
-
-        .letter {
-            font-size: 104px;
-            color: #c56e53;
-        }
-
-        &:hover {
-            .text {
-                display: block;
-            }
-
-            .letter {
-                display: none;
-            }
-        }
-    }
-}
 
 .dica {
     align-items: center;

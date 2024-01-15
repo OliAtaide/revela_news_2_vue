@@ -195,7 +195,7 @@
         Considere sepse também, se houver evidência de infecção e uma pontuação
         de 3 em um parâmetro de avaliação.
       </p>
-      <img class="img-fluid" src="/imgs/diagram1.svg" alt="" />
+      <img class="img-fluid" src="@/assets/diagram1.svg" alt="" />
     </swiper-slide>
     <swiper-slide>
       <div class="dica d-flex mb-3">
@@ -349,10 +349,11 @@
         ao parâmetros fisiológicos, considere as informações como Verdadeiras ou
         Falsas
       </div>
-      
+
       <TrueFalseTable :perguntas="perguntas"></TrueFalseTable>
     </swiper-slide>
   </swiper-container>
+  <SwiperNav></SwiperNav>
   <RespostaClinicaModal
     v-for="(q, i) in questoes"
     :key="i"
@@ -365,6 +366,7 @@
 <script>
 import RespostaClinica from "@/components/RespostaClinica.vue";
 import RespostaClinicaModal from "@/components/RespostaClinicaModal.vue";
+import SwiperNav from "@/components/SwiperNav.vue";
 import TrueFalseTable from "@/components/TrueFalseTable.vue";
 import axios from "axios";
 
@@ -382,7 +384,8 @@ export default {
   components: {
     RespostaClinica,
     RespostaClinicaModal,
-    TrueFalseTable
+    TrueFalseTable,
+    SwiperNav,
   },
 
   methods: {

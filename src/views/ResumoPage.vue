@@ -64,11 +64,18 @@
       </ul>
     </swiper-slide>
   </swiper-container>
+  <swiper-nav></swiper-nav>
 </template>
 
 <script>
+import SwiperNav from '@/components/SwiperNav.vue';
+
 export default {
   name: "ResumoPage",
+  
+  components: {
+    SwiperNav
+  }
 };
 </script>
 

@@ -281,12 +281,8 @@
         <img class="img-fluid" src="@/assets/spo2.png" alt="" />
       </div>
       <div class="aviso">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-          <title>head-lightbulb</title>
-          <path
-            d="M13 3C9.23 3 6.19 5.95 6 9.66L4.08 12.19C3.84 12.5 4.08 13 4.5 13H6V16C6 17.11 6.89 18 8 18H9V21H16V16.31C18.37 15.19 20 12.8 20 10C20 6.14 16.88 3 13 3M14 14H12V13H14V14M15.6 9.5C15.34 9.94 14.96 10.32 14.5 10.58V12H11.5V10.58C10.07 9.75 9.57 7.92 10.4 6.5S13.07 4.56 14.5 5.38 16.43 8.05 15.6 9.5Z"
-          />
-        </svg>
+        
+        <span class="mdi mdi-head-lightbulb"></span>
 
         Para evitar dúvidas, a seção do gráfico correspondente à escala que não
         está sendo usada, deve ser riscada conforme ilustrado acima.
@@ -317,24 +313,14 @@
         sistema de fornecimento de oxigênio BTS/código do dispositivo
       </button>
       <div class="aviso">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-          <title>head-lightbulb</title>
-          <path
-            d="M13 3C9.23 3 6.19 5.95 6 9.66L4.08 12.19C3.84 12.5 4.08 13 4.5 13H6V16C6 17.11 6.89 18 8 18H9V21H16V16.31C18.37 15.19 20 12.8 20 10C20 6.14 16.88 3 13 3M14 14H12V13H14V14M15.6 9.5C15.34 9.94 14.96 10.32 14.5 10.58V12H11.5V10.58C10.07 9.75 9.57 7.92 10.4 6.5S13.07 4.56 14.5 5.38 16.43 8.05 15.6 9.5Z"
-          />
-        </svg>
+        <span class="mdi mdi-head-lightbulb"></span>
         Uso de qualquer oxigênio suplementar, adicionar um valor de 2 à
         pontuação total do NEWS 2.
       </div>
     </swiper-slide>
     <swiper-slide>
       <div class="aviso">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-          <title>head-lightbulb</title>
-          <path
-            d="M13 3C9.23 3 6.19 5.95 6 9.66L4.08 12.19C3.84 12.5 4.08 13 4.5 13H6V16C6 17.11 6.89 18 8 18H9V21H16V16.31C18.37 15.19 20 12.8 20 10C20 6.14 16.88 3 13 3M14 14H12V13H14V14M15.6 9.5C15.34 9.94 14.96 10.32 14.5 10.58V12H11.5V10.58C10.07 9.75 9.57 7.92 10.4 6.5S13.07 4.56 14.5 5.38 16.43 8.05 15.6 9.5Z"
-          />
-        </svg>
+        <span class="mdi mdi-head-lightbulb"></span>
         Caro aluno, leia com muita atenção as declarações abaixo, que são
         relacionadas ao registro das pontuações individuais do NEWS 2 e marque
         verdadeiro ou falso, conforme o que você estudou até aqui.
@@ -342,11 +328,13 @@
       <TrueFalseTable :perguntas="perguntas"></TrueFalseTable>
     </swiper-slide>
   </swiper-container>
+  <swiper-nav></swiper-nav>
 </template>
 
 <script>
 import axios from "axios";
 import TrueFalseTable from "@/components/TrueFalseTable.vue";
+import SwiperNav from "@/components/SwiperNav.vue";
 
 export default {
   name: "SlideTwo",
@@ -358,6 +346,7 @@ export default {
   },
 
   components: {
+    SwiperNav,
     TrueFalseTable,
   },
 
@@ -379,4 +368,20 @@ export default {
 };
 </script>
 
-<style></style>
+<style scoped>
+table,
+th,
+td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  text-align: center;
+}
+th,
+td {
+  padding: 10px;
+}
+
+table {
+  border-width: 2px !important;
+}
+</style>

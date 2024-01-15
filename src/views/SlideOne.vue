@@ -131,6 +131,7 @@
       </table>
     </swiper-slide>
   </swiper-container>
+  <SwiperNav></SwiperNav>
   <div
     :class="'parametrosFisiologicosModais' + i"
     v-for="(p, i) in parametros_fisiologicos"
@@ -143,12 +144,20 @@
       :parametro="i"
       :index="j"
     ></ParametroFisiologicoModal>
+    <ParametroFisiologicoModal
+      v-for="(n, j) in p.ncp"
+      :key="j"
+      :modal="n"
+      :parametro="i"
+      :index="j"
+    ></ParametroFisiologicoModal>
   </div>
 </template>
 
 <script>
 import ParametroFisiologico from "@/components/ParametroFisiologico.vue";
 import ParametroFisiologicoModal from "@/components/ParametroFisiologicoModal.vue";
+import SwiperNav from "@/components/SwiperNav.vue";
 import axios from "axios";
 
 export default {
@@ -163,6 +172,7 @@ export default {
   },
 
   components: {
+    SwiperNav,
     ParametroFisiologico,
     ParametroFisiologicoModal,
   },
@@ -180,7 +190,6 @@ export default {
     },
     parametroSlide(index) {
       const swiperEl = document.querySelector("swiper-container");
-      console.log(swiperEl.swiper);
       swiperEl.swiper.slideTo(index);
     },
   },

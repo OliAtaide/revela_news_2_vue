@@ -51,11 +51,13 @@
       <TrueFalseTable :perguntas="perguntas"></TrueFalseTable>
     </swiper-slide>
   </swiper-container>
+  <SwiperNav></SwiperNav>
 </template>
 
 <script>
 import axios from "axios";
 import TrueFalseTable from "@/components/TrueFalseTable.vue";
+import SwiperNav from "@/components/SwiperNav.vue";
 
 export default {
   name: "SlideThree",
@@ -67,6 +69,7 @@ export default {
   },
 
   components: {
+    SwiperNav,
     TrueFalseTable,
   },
 

@@ -20,16 +20,27 @@
         {{ b.titulo }}
       </button>
     </div>
+
+    <div class="d-flex row_nc">
+      <button
+        v-for="(n, i) in parametro.ncp"
+        :key="i"
+        type="button"
+        data-bs-toggle="modal"
+        :data-bs-target="'#' + n.id"
+      >
+        <span class="letter"> {{ n.letra }} </span>
+        <span class="text" v-html="n.placeholder"></span>
+      </button>
+    </div>
   </swiper-slide>
 </template>
 
 <script>
-
 export default {
   name: "ParametroFisiologico",
 
   props: ["parametro", "index"],
-
 };
 </script>
 
@@ -42,5 +53,34 @@ export default {
 
 h3 {
   font-weight: 400;
+}
+
+.row_nc {
+  gap: 40px;
+  justify-content: center;
+  button {
+    aspect-ratio: 1/1;
+    width: 200px;
+    height: 200px;
+
+    .text {
+      display: none;
+    }
+
+    .letter {
+      font-size: 104px;
+      color: #c56e53;
+    }
+
+    &:hover {
+      .text {
+        display: block;
+      }
+
+      .letter {
+        display: none;
+      }
+    }
+  }
 }
 </style>

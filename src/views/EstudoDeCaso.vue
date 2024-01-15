@@ -47,6 +47,7 @@
       </button>
     </swiper-slide>
   </swiper-container>
+  <SwiperNav></SwiperNav>
   <EstudoDeCasoModal
     v-for="(e, i) in estudos"
     :key="i"
@@ -59,6 +60,7 @@
 <script>
 import EstudoDeCaso from "@/components/EstudoDeCaso.vue";
 import EstudoDeCasoModal from "@/components/EstudoDeCasoModal.vue";
+import SwiperNav from "@/components/SwiperNav.vue";
 import axios from "axios";
 
 export default {
@@ -67,6 +69,7 @@ export default {
   components: {
     EstudoDeCaso,
     EstudoDeCasoModal,
+    SwiperNav
   },
 
   data() {

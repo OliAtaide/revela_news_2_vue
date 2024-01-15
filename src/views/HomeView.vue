@@ -1,6 +1,6 @@
 <template>
   <div class="main">
-    <swiper-container :loop="true">
+    <swiper-container>
       <swiper-slide>
         <div class="d-flex flex-column h-100 pb-5">
           <div class="row">
@@ -167,25 +167,15 @@
             </div>
           </div>
         </div>
-        <p class="my-3">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-            <title>cursor-default-click</title>
-            <path
-              d="M10.76,8.69A0.76,0.76 0 0,0 10,9.45V20.9C10,21.32 10.34,21.66 10.76,21.66C10.95,21.66 11.11,21.6 11.24,21.5L13.15,19.95L14.81,23.57C14.94,23.84 15.21,24 15.5,24C15.61,24 15.72,24 15.83,23.92L18.59,22.64C18.97,22.46 19.15,22 18.95,21.63L17.28,18L19.69,17.55C19.85,17.5 20,17.43 20.12,17.29C20.39,16.97 20.35,16.5 20,16.21L11.26,8.86L11.25,8.87C11.12,8.76 10.95,8.69 10.76,8.69M15,10V8H20V10H15M13.83,4.76L16.66,1.93L18.07,3.34L15.24,6.17L13.83,4.76M10,0H12V5H10V0M3.93,14.66L6.76,11.83L8.17,13.24L5.34,16.07L3.93,14.66M3.93,3.34L5.34,1.93L8.17,4.76L6.76,6.17L3.93,3.34M7,10H2V8H7V10"
-            />
-          </svg>
+        <div class="dica d-flex mb-3">
+          <span class="mdi mdi-cursor-default-click"></span>
           Cique no botão abaixo
-        </p>
+        </div>
         <button class="btn">Mais formas de como usar o news 2</button>
       </swiper-slide>
       <swiper-slide>
         <div class="aviso">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-            <title>head-lightbulb</title>
-            <path
-              d="M13 3C9.23 3 6.19 5.95 6 9.66L4.08 12.19C3.84 12.5 4.08 13 4.5 13H6V16C6 17.11 6.89 18 8 18H9V21H16V16.31C18.37 15.19 20 12.8 20 10C20 6.14 16.88 3 13 3M14 14H12V13H14V14M15.6 9.5C15.34 9.94 14.96 10.32 14.5 10.58V12H11.5V10.58C10.07 9.75 9.57 7.92 10.4 6.5S13.07 4.56 14.5 5.38 16.43 8.05 15.6 9.5Z"
-            />
-          </svg>
+          <span class="mdi mdi-head-lightbulb"></span>
           <span>
             Caro aluno, leia cada uma das frases a seguir e clique naquelas que
             descrevem os usos adicionais do NEWS 2. Após encerrar, clique em
@@ -253,15 +243,14 @@ export default {
   name: "HomeView",
 
   components: {
-    SwiperNav,
     PassoAPasso,
+    SwiperNav
   },
 
   setup() {
     onMounted(() => {
       const swiperNext = document.getElementById("swiperNext");
       const swiperPrev = document.getElementById("swiperPrev");
-      console.log(swiperPrev, swiperNext);
       return {
         swiperPrev,
         swiperNext,
@@ -281,5 +270,80 @@ svg {
   text-align: center;
   border: 2px solid #262626;
   border-radius: 0;
+}
+
+.balao {
+  border-radius: 8px;
+  border: 1px solid black;
+  padding: 0.5em;
+  position: relative;
+}
+
+.balao:before {
+  content: " ";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border: 10px solid;
+  border-color: black transparent transparent;
+}
+
+.balao:after {
+  content: " ";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border: 9px solid;
+  border-color: transparent transparent white;
+}
+
+.balao-1::before {
+  left: calc(50% - 10px);
+  right: auto;
+  bottom: auto;
+  top: -20px;
+  border: 10px solid;
+  border-color: transparent transparent black;
+}
+
+.balao-1::after {
+  left: calc(50% - 9.5px);
+  right: auto;
+  bottom: auto;
+  top: -18px;
+}
+
+.balao-3::before {
+  left: auto;
+  right: 10%;
+  bottom: -20px;
+  top: auto;
+}
+
+.balao-3::after {
+  left: auto;
+  right: calc(10% + 0.5px);
+  bottom: -17px;
+  top: auto;
+  border: 9px solid;
+  border-color: white transparent transparent;
+}
+
+.balao-2::before {
+  right: auto;
+  left: 10%;
+  bottom: -20px;
+  top: auto;
+  border: 10px solid;
+  border-color: black transparent transparent;
+}
+
+.balao-2::after {
+  right: auto;
+  left: calc(10% + 0.5px);
+  bottom: -17px;
+  top: auto;
+  border: 9px solid;
+  border-color: white transparent transparent;
 }
 </style>

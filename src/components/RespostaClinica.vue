@@ -77,7 +77,6 @@ export default {
   methods: {
     setData(v) {
       this.valor = v;
-      console.log(v);
     },
     sendData(m) {
       if (this.questao == this.valor) {

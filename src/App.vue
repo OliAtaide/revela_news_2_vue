@@ -26,17 +26,21 @@
       </div>
     </div>
   </main>
+
+  <nav-footer></nav-footer>
 </template>
 
 <script>
 import NavBar from "@/components/NavBar";
 import { register } from "swiper/element/bundle";
+import NavFooter from "./components/NavFooter.vue";
 
 register();
 
 export default {
   components: {
     NavBar,
+    NavFooter
   },
 };
 </script>
