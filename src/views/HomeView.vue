@@ -1,6 +1,6 @@
 <template>
   <div class="main">
-    <swiper-container>
+    <swiper-container @slideChange="changeTitle">
       <swiper-slide>
         <div class="d-flex flex-column h-100 pb-5">
           <div class="row">
@@ -171,7 +171,9 @@
           <span class="mdi mdi-cursor-default-click"></span>
           Cique no botão abaixo
         </div>
-        <button class="btn btn-primary p-4">Mais formas de como usar o news 2</button>
+        <button class="btn btn-primary p-4">
+          Mais formas de como usar o news 2
+        </button>
       </swiper-slide>
       <swiper-slide>
         <div class="aviso">
@@ -237,7 +239,7 @@
 <script>
 import PassoAPasso from "@/components/PassoAPasso.vue";
 import SwiperNav from "@/components/SwiperNav.vue";
-import { onMounted } from "vue";
+import { mapActions, mapMutations } from "vuex";
 
 export default {
   name: "HomeView",
@@ -247,15 +249,33 @@ export default {
     SwiperNav,
   },
 
-  setup() {
-    onMounted(() => {
-      const swiperNext = document.getElementById("swiperNext");
-      const swiperPrev = document.getElementById("swiperPrev");
-      return {
-        swiperPrev,
-        swiperNext,
-      };
-    });
+  data() {
+    return {
+      titulos: [
+        "Instruções do curso",
+        "Introdução",
+        "Objetivos de Aprendizagem",
+        "Benefícios do NEWS 2",
+        "Usos do NEWS 2",
+        "Usos do NEWS 2",
+        "Exceções do NEWS 2",
+        "O processo do News 2",
+      ],
+    };
+  },
+
+  methods: {
+    changeTitle() {
+      console.log(window.$(".game .navbar-brand"));
+      window.$(".game .navbar-brand").html("uwu");
+    },
+    ...mapMutations(["setTitulos"]),
+    ...mapActions(["setSwiperSettings"]),
+  },
+
+  mounted() {
+    this.$store.commit('setTitulos', this.titulos);
+    this.setSwiperSettings();
   },
 };
 </script>

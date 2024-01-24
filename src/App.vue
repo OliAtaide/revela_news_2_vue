@@ -10,13 +10,33 @@
               <h1>Instruções do curso</h1>
             </div>
             <div class="ms-auto navbar-nav nav-pagination d-flex flex-row">
-              <router-link class="nav-link" to="/">Home</router-link>
-              <router-link class="nav-link" to="/1">1</router-link>
-              <router-link class="nav-link" to="/2">2</router-link>
-              <router-link class="nav-link" to="/3">3</router-link>
-              <router-link class="nav-link" to="/4">4</router-link>
+              <router-link class="nav-link" to="/">
+                Visão <br />Geral
+              </router-link>
+              <router-link class="nav-link" to="/1">
+                1
+                <br />
+                Medir
+              </router-link>
+              <router-link class="nav-link" to="/2">
+                2
+                <br />
+                Gravar
+              </router-link>
+              <router-link class="nav-link" to="/3"
+                >3
+                <br />
+                Calcular
+              </router-link>
+              <router-link class="nav-link" to="/4"
+                >4
+                <br />
+                Identificar
+              </router-link>
               <router-link class="nav-link" to="/estudo-de-caso">
-                Estudo de Caso
+                Estudo
+                <br />
+                de Caso
               </router-link>
               <router-link class="nav-link" to="/resumo"> Resumo </router-link>
             </div>
@@ -40,7 +60,7 @@ register();
 export default {
   components: {
     NavBar,
-    NavFooter
+    NavFooter,
   },
 };
 </script>
@@ -48,8 +68,6 @@ export default {
 <style lang="scss">
 @import "./assets/style.scss";
 @import "./assets/health-icons/style.scss"; //Here i add extra "./"(current directory)
-
-
 
 .balao {
   border-radius: 8px;
