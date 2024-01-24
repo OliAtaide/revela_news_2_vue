@@ -91,4 +91,20 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+.form-control {
+  border: 1px solid #262626;
+  background-color: #eec174;
+  border-radius: 0;
+  font-weight: 700;
+  width: auto !important;
+  font-size: 17px;
+
+  input {
+    width: 60px;
+    padding: 8px 0;
+    text-align: center;
+    font-weight: 700;
+  }
+}
+</style>

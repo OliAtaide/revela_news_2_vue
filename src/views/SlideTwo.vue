@@ -281,7 +281,6 @@
         <img class="img-fluid" src="@/assets/spo2.png" alt="" />
       </div>
       <div class="aviso">
-        
         <span class="mdi mdi-head-lightbulb"></span>
 
         Para evitar dúvidas, a seção do gráfico correspondente à escala que não
@@ -369,19 +368,21 @@ export default {
 </script>
 
 <style scoped>
-table,
-th,
-td {
-  border: 1px solid black;
-  border-collapse: collapse;
-  text-align: center;
-}
-th,
-td {
-  padding: 10px;
-}
+.modal {
+  table,
+  th,
+  td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    text-align: center;
+  }
+  th,
+  td {
+    padding: 10px;
+  }
 
-table {
-  border-width: 2px !important;
+  table {
+    border-width: 2px !important;
+  }
 }
 </style>

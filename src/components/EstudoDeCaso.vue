@@ -15,7 +15,7 @@
               parâmetros individuais no quadro do lado oposto e clique em
               enviar.
             </div>
-            <div class="balao balao-4 w-75 mt-auto">
+            <div class="balao balao-2 w-75 mt-auto">
               E usar os botões na parte inferior direita da tela para navegar
               através do curso.
             </div>
@@ -106,13 +106,16 @@ export default {
   name: "EstudoDeCaso",
 
   props: ["labels", "estudo", "index"],
-
-  
 };
 </script>
 
-<style>
+<style scoped>
 table h6 {
   background-color: transparent !important;
+}
+
+th, td {
+  padding-top: 8px;
+  padding-bottom: 8px;
 }
 </style>

@@ -48,4 +48,81 @@ export default {
 <style lang="scss">
 @import "./assets/style.scss";
 @import "./assets/health-icons/style.scss"; //Here i add extra "./"(current directory)
+
+
+
+.balao {
+  border-radius: 8px;
+  border: 1px solid black;
+  padding: 0.5em;
+  position: relative;
+}
+
+.balao:before {
+  content: " ";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border: 10px solid;
+  border-color: black transparent transparent;
+}
+
+.balao:after {
+  content: " ";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border: 9px solid;
+  border-color: transparent transparent white;
+}
+
+.balao-1::before {
+  left: calc(50% - 10px);
+  right: auto;
+  bottom: auto;
+  top: -20px;
+  border: 10px solid;
+  border-color: transparent transparent black;
+}
+
+.balao-1::after {
+  left: calc(50% - 9.5px);
+  right: auto;
+  bottom: auto;
+  top: -18px;
+}
+
+.balao-3::before {
+  left: auto;
+  right: 10%;
+  bottom: -20px;
+  top: auto;
+}
+
+.balao-3::after {
+  left: auto;
+  right: calc(10% + 0.5px);
+  bottom: -17px;
+  top: auto;
+  border: 9px solid;
+  border-color: white transparent transparent;
+}
+
+.balao-2::before {
+  right: auto;
+  left: 10%;
+  bottom: -20px;
+  top: auto;
+  border: 10px solid;
+  border-color: black transparent transparent;
+}
+
+.balao-2::after {
+  right: auto;
+  left: calc(10% + 0.5px);
+  bottom: -17px;
+  top: auto;
+  border: 9px solid;
+  border-color: white transparent transparent;
+}
 </style>

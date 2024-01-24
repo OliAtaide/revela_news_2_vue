@@ -35,14 +35,14 @@
           </table>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-primary btn-proximo">
+          <button
+            type="button"
+            class="btn btn-primary btn-proximo"
+            :id="'modalResposta' + index + 'Next'"
+            @click="continuar"
+          >
             CONTINUAR
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-              <title>chevron-right</title>
-              <path
-                d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z"
-              />
-            </svg>
+            <span class="mdi mdi-chevron-right"> </span>
           </button>
         </div>
       </div>
@@ -55,5 +55,13 @@ export default {
   name: "RespostaClinica",
 
   props: ["questao", "index", "limites"],
+
+  methods: {
+    continuar() {
+      const swiperEl = document.querySelector("swiper-container");
+      swiperEl.swiper.slideNext();
+      window.$(".modal").modal("hide");
+    },
+  },
 };
 </script>

@@ -76,22 +76,6 @@ body {
 .main {
     width: 100%;
     display: flex;
-
-    .form-control {
-        border: 1px solid #262626;
-        background-color: #eec174;
-        border-radius: 0;
-        font-weight: 700;
-        width: auto !important;
-        font-size: 17px;
-
-        input {
-            width: 60px;
-            padding: 8px 0;
-            text-align: center;
-            font-weight: 700;
-        }
-    }
 }
 
 .btn-secondary {
@@ -386,8 +370,6 @@ swiper-slide {
     row-gap: 1em;
 }
 
-
-
 .dica {
     align-items: center;
     gap: 0.5em;
@@ -600,7 +582,6 @@ table:not(.estudo-tabela) {
         margin: 0;
     }
 }
-
 
 .estudo-tabela {
     width: 100%;
