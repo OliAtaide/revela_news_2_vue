@@ -10,6 +10,7 @@ export default createStore({
   },
   actions: {
     setSwiperSettings() {
+      window.$(".game .navbar-brand h1").html(this.state.titulos[0]);
       const swiperEl = document.querySelector("swiper-container");
 
       swiperEl.addEventListener("swiperslidechange", (event) => {

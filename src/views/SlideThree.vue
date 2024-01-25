@@ -58,6 +58,7 @@
 import axios from "axios";
 import TrueFalseTable from "@/components/TrueFalseTable.vue";
 import SwiperNav from "@/components/SwiperNav.vue";
+import { mapActions, mapMutations } from "vuex";
 
 export default {
   name: "SlideThree",
@@ -65,6 +66,7 @@ export default {
   data() {
     return {
       perguntas: [],
+      titulos: ["Calculando uma pontuação", "Uma pontuação vermelha", "Quiz"],
     };
   },
 
@@ -83,10 +85,17 @@ export default {
         })
         .catch((err) => console.log(err));
     },
+    ...mapMutations(["setTitulos"]),
+    ...mapActions(["setSwiperSettings"]),
   },
 
   created() {
     this.getData();
+  },
+
+  mounted() {
+    this.$store.commit("setTitulos", this.titulos);
+    this.setSwiperSettings();
   },
 };
 </script>

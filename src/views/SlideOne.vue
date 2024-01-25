@@ -159,6 +159,7 @@ import ParametroFisiologico from "@/components/ParametroFisiologico.vue";
 import ParametroFisiologicoModal from "@/components/ParametroFisiologicoModal.vue";
 import SwiperNav from "@/components/SwiperNav.vue";
 import axios from "axios";
+import { mapActions, mapMutations } from "vuex";
 
 export default {
   name: "SlideOne",
@@ -168,6 +169,17 @@ export default {
       parametros_fisiologicos: [],
       perguntas: [],
       slider: null,
+      titulos: [
+        "Parâmetros Fisiológicos",
+        "Observações",
+        "Observações",
+        "Observações",
+        "Observações",
+        "Observações",
+        "Observações",
+        "Observações",
+        "Quiz - Medir",
+      ],
     };
   },
 
@@ -192,10 +204,17 @@ export default {
       const swiperEl = document.querySelector("swiper-container");
       swiperEl.swiper.slideTo(index);
     },
+    ...mapMutations(["setTitulos"]),
+    ...mapActions(["setSwiperSettings"]),
   },
 
   created() {
     this.getData();
+  },
+
+  mounted() {
+    this.$store.commit("setTitulos", this.titulos);
+    this.setSwiperSettings();
   },
 };
 </script>

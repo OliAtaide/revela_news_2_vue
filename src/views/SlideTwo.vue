@@ -334,6 +334,7 @@
 import axios from "axios";
 import TrueFalseTable from "@/components/TrueFalseTable.vue";
 import SwiperNav from "@/components/SwiperNav.vue";
+import { mapActions, mapMutations } from "vuex";
 
 export default {
   name: "SlideTwo",
@@ -341,6 +342,16 @@ export default {
   data() {
     return {
       perguntas: [],
+      titulos: [
+        "O sistema de pontuação NEWS 2",
+        "Marcando uma pontuação individual",
+        "Registro de observações",
+        "Exercício sobre registro de observações",
+        "Uma pontuação vermelha",
+        "Escalas SpO2",
+        "Oxigênio suplementar",
+        "Quiz",
+      ],
     };
   },
 
@@ -359,10 +370,17 @@ export default {
         })
         .catch((err) => console.log(err));
     },
+    ...mapMutations(["setTitulos"]),
+    ...mapActions(["setSwiperSettings"]),
   },
 
   created() {
     this.getData();
+  },
+
+  mounted() {
+    this.$store.commit("setTitulos", this.titulos);
+    this.setSwiperSettings();
   },
 };
 </script>

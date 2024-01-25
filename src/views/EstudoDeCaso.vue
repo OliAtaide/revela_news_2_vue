@@ -62,6 +62,7 @@ import EstudoDeCaso from "@/components/EstudoDeCaso.vue";
 import EstudoDeCasoModal from "@/components/EstudoDeCasoModal.vue";
 import SwiperNav from "@/components/SwiperNav.vue";
 import axios from "axios";
+import { mapActions, mapMutations } from "vuex";
 
 export default {
   name: "SlideOne",
@@ -69,7 +70,7 @@ export default {
   components: {
     EstudoDeCaso,
     EstudoDeCasoModal,
-    SwiperNav
+    SwiperNav,
   },
 
   data() {
@@ -84,6 +85,20 @@ export default {
         "Consciência",
         "Temperatura",
       ],
+      titulos: [
+        "Estudo de Caso - Introdução",
+        "Estudo de Caso 1",
+        "Estudo de Caso 1",
+        "Estudo de Caso 2",
+        "Estudo de Caso 2",
+        "Estudo de Caso 3",
+        "Estudo de Caso 3",
+        "Estudo de Caso 4",
+        "Estudo de Caso 4",
+        "Estudo de Caso 5",
+        "Estudo de Caso 5",
+        "Estudos de Caso",
+      ],
     };
   },
 
@@ -96,10 +111,17 @@ export default {
         })
         .catch((err) => console.log(err));
     },
+    ...mapMutations(["setTitulos"]),
+    ...mapActions(["setSwiperSettings"]),
   },
 
   created() {
     this.getData();
+  },
+
+  mounted() {
+    this.$store.commit("setTitulos", this.titulos);
+    this.setSwiperSettings();
   },
 };
 </script>

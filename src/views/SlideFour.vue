@@ -369,6 +369,7 @@ import RespostaClinicaModal from "@/components/RespostaClinicaModal.vue";
 import SwiperNav from "@/components/SwiperNav.vue";
 import TrueFalseTable from "@/components/TrueFalseTable.vue";
 import axios from "axios";
+import { mapActions, mapMutations } from "vuex";
 
 export default {
   name: "SlideFour",
@@ -378,6 +379,19 @@ export default {
       limites: [],
       questoes: [],
       perguntas: [],
+      titulos: [
+        "Gatilho inicial",
+        "Componentes da Resposta Clínica",
+        "Respostas Clínicas",
+        "Quiz",
+        "Quiz",
+        "Quiz",
+        "Quiz",
+        "Quiz",
+        "NEWS 2 e Sepse",
+        "Ecalonamento e reposta",
+        "Quiz",
+      ],
     };
   },
 
@@ -400,10 +414,17 @@ export default {
         })
         .catch((err) => console.log(err));
     },
+    ...mapMutations(["setTitulos"]),
+    ...mapActions(["setSwiperSettings"]),
   },
 
   created() {
     this.getData();
+  },
+
+  mounted() {
+    this.$store.commit("setTitulos", this.titulos);
+    this.setSwiperSettings();
   },
 };
 </script>

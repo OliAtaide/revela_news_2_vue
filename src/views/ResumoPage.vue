@@ -68,14 +68,35 @@
 </template>
 
 <script>
-import SwiperNav from '@/components/SwiperNav.vue';
+import SwiperNav from "@/components/SwiperNav.vue";
+import { mapActions, mapMutations } from "vuex";
 
 export default {
   name: "ResumoPage",
-  
+
   components: {
-    SwiperNav
-  }
+    SwiperNav,
+  },
+
+  data() {
+    return {
+      titulos: ["Circunstâncias excepcionais", "Resumo dos principais pontos"],
+    };
+  },
+
+  methods: {
+    changeTitle() {
+      console.log(window.$(".game .navbar-brand"));
+      window.$(".game .navbar-brand").html("uwu");
+    },
+    ...mapMutations(["setTitulos"]),
+    ...mapActions(["setSwiperSettings"]),
+  },
+
+  mounted() {
+    this.$store.commit("setTitulos", this.titulos);
+    this.setSwiperSettings();
+  },
 };
 </script>
 

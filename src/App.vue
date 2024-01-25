@@ -69,6 +69,13 @@ export default {
 @import "./assets/style.scss";
 @import "./assets/health-icons/style.scss"; //Here i add extra "./"(current directory)
 
+.game-menu .navbar-brand {
+  width: 40% !important;
+  h1{
+    text-wrap: wrap;
+  }
+}
+
 .balao {
   border-radius: 8px;
   border: 1px solid black;
