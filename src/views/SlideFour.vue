@@ -8,7 +8,7 @@
         <div class="col-sm">
           <p>
             Caro aluno; quando um paciente apresenta, inicialmente, uma doen;a
-            aguda ou sofre uma deteriora;áo aguda de sua condição clínica, o
+            aguda ou sofre uma deterioração aguda de sua condição clínica, o
             NEWS 2 ajuda a determinar a urgência e a escala de respostas clínica
             necessária.
           </p>
@@ -32,7 +32,7 @@
             <tbody>
               <tr>
                 <td>Pontuação total 0-4</td>
-                <td>Baixo clínico</td>
+                <td>Baixo</td>
               </tr>
               <tr>
                 <td>
@@ -43,7 +43,7 @@
               </tr>
               <tr>
                 <td>Pontuação total 5-6</td>
-                <td>Medio</td>
+                <td>Médio</td>
               </tr>
               <tr>
                 <td>Pontuação total 7 ou mais</td>
@@ -55,7 +55,7 @@
       </div>
       <div class="aviso">
         <span class="mdi mdi-head-lightbulb"></span>
-        Uma pontuação vermelha refere-se a uma variação extrema em um arâmetro
+        Uma pontuação vermelha refere-se a uma variação extrema em um parâmetro
         fisiológico (ou seja, uma pontuação de 3 no gráfico NEWS 2).
       </div>
     </swiper-slide>
@@ -91,7 +91,7 @@
           <td>
             <ul>
               <li>
-                O enfermeito deve informar imediatamente a equipe médica
+                O enfermeiro deve informar imediatamente a equipe médica
                 (experiencia da equipe para atender o paciente) que está
                 cuidando do paciente
               </li>

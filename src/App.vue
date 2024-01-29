@@ -9,6 +9,7 @@
             <div class="navbar-brand">
               <h1>Instruções do curso</h1>
             </div>
+            <!--
             <div class="ms-auto navbar-nav nav-pagination d-flex flex-row">
               <router-link class="nav-link" to="/">
                 Visão <br />Geral
@@ -39,6 +40,17 @@
                 de Caso
               </router-link>
               <router-link class="nav-link" to="/resumo"> Resumo </router-link>
+            </div>
+-->
+            <div class="ms-auto navbar-nav nav-pagination d-flex flex-row">
+              <router-link
+                class="nav-link"
+                v-for="r in $router.options.routes"
+                :key="r.path"
+                :to="r.path"
+              >
+                {{ r.name }}
+              </router-link>
             </div>
           </nav>
           <router-view />
@@ -71,7 +83,7 @@ export default {
 
 .game-menu .navbar-brand {
   width: 40% !important;
-  h1{
+  h1 {
     text-wrap: wrap;
   }
 }
@@ -149,5 +161,9 @@ export default {
   top: auto;
   border: 9px solid;
   border-color: white transparent transparent;
+}
+
+.nav-link{
+  white-space: pre;
 }
 </style>

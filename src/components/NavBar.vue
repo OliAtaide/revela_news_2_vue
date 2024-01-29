@@ -7,14 +7,6 @@
         Tradução e adaptação transcultural para o Brasil
       </div>
       <div class="col-sm-6">
-        <strong>Unidade 1: </strong>
-        NATIONAL EARLY WARNING SCORE 2
-      </div>
-      <div class="col-sm-6">
-        <strong>Aula 1: </strong>
-        Visão Geral
-      </div>
-      <div class="col-sm-6">
         <strong>Conteudistas: </strong>
         Renata Cristina da Silva Martins; Joseli Soares Brazorotto; Aline
         Augusta Medeiros Rutz; Ana Paula Amestoy de Oliveira; Janete de Souza

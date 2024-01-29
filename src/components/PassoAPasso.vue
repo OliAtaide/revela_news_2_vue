@@ -3,7 +3,7 @@
     <button
       v-for="(p, i) in passos.slice().reverse()"
       :key="i"
-      :class="'nav-link' + (i == passos.length - 1 ? ' active' : '')"
+      class="nav-link"
       data-bs-toggle="tab"
       :data-bs-target="'#passo' + (passos.length - i) + 'Tab'"
       type="button"
@@ -18,7 +18,7 @@
     <div
       v-for="(p, i) in passos"
       :key="i"
-      :class="'tab-pane fade' + (i == 0 ? ' show active' : '')"
+      class="tab-pane fade"
       :id="'passo' + (i + 1) + 'Tab'"
       role="tabpanel"
       aria-labelledby="home-tab"

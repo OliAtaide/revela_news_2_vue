@@ -16,8 +16,7 @@
               enviar.
             </div>
             <div class="balao balao-2 w-75 mt-auto">
-              E usar os botões na parte inferior direita da tela para navegar
-              através do curso.
+              Você pode acessar o gráfico NEWS2 clicando no botão recursos abaixo.
             </div>
           </div>
         </div>

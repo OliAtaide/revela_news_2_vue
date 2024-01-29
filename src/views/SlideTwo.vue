@@ -264,12 +264,12 @@
           </p>
           <ul>
             <li>
-              A escala 1 é a ecala usual para pacientes em que uma saturação de
+              A escala 1 é a escala usual para pacientes em que uma saturação de
               oxigênio normal é esperada.
             </li>
             <li>
               A escala 2 é a escala a ser usada para pacientes com insuficiência
-              respiratória hipercáprica e uma faixa de saturação de oxigênio
+              respiratória hipercápnica e uma faixa de saturação de oxigênio
               recomendada de 88-92%
             </li>
           </ul>
@@ -290,7 +290,7 @@
     <swiper-slide>
       <p>
         Caro aluno, observe que quando o oxigênio suplementar está sendo usado
-        para manter a saturação do oxigênio deejado, a taxa de fornecimento de
+        para manter a saturação do oxigênio desejado, a taxa de fornecimento de
         oxigênio (L/min.) e o sistema dispositivo de forncimento, devem ser
         documentados no gráfico NEWS 2, usando os dois códigos do sistema
         dispositivo de fornecimento de oxigênio BTS.
@@ -299,7 +299,7 @@
         <img src="@/assets/o2.png" alt="" />
         <p>
           <i>
-            O exemplo acima motra três litros de oxigênio por minuto usando um
+            O exemplo acima mostra três litros de oxigênio por minuto usando um
             tubo nasal canular.
           </i>
         </p>

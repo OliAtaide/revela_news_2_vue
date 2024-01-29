@@ -10,32 +10,32 @@ import EstudoDeCaso from "../views/EstudoDeCaso.vue";
 const routes = [
   {
     path: "/",
-    name: "home",
+    name: "Visão\n Geral",
     component: HomeView,
   },
   {
     path: "/1",
-    name: "slideOne",
+    name: "1\nMedir",
     component: SlideOne,
   },
   {
     path: "/2",
-    name: "slideTwo",
+    name: "2\nGravar",
     component: SlideTwo,
   },
   {
     path: "/3",
-    name: "slideThree",
+    name: "3\nCalcular",
     component: SlideThree,
   },
   {
     path: "/4",
-    name: "slideFour",
+    name: "4\nIdentificar",
     component: SlideFour,
   },
   {
     path: "/estudo-de-caso",
-    name: "Estudo de Caso",
+    name: "Estudo\n de Caso",
     component: EstudoDeCaso,
   },
   {

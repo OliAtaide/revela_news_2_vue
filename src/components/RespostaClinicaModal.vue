@@ -11,7 +11,10 @@
           <h1 class="modal-title fs-5" id="exampleModalLabel"></h1>
         </div>
         <div class="modal-body">
-          <p>A resposta clínica corresponde ao limiar de ${limites[q].botao}</p>
+          <p>
+            A resposta clínica corresponde ao limiar de
+            {{ limites[questao].botao }}
+          </p>
           <table class="table-urgencia">
             <tbody>
               <th

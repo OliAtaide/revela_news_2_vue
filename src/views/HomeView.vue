@@ -103,9 +103,9 @@
         <ul class="ul-licoes">
           <li>Descrever os benefícios do NEWS 2;</li>
           <li>Listar as principais maneiras em que o NEWS 2 deve ser usado;</li>
-          <li>Conhecer os seis parâmetros fisiológios incluídos no NEWS 2;</li>
+          <li>Conhecer os seis parâmetros fisiológicos incluídos no NEWS 2;</li>
           <li>Descrever o sistema, os limites e os gatilhos do NEWS 2;</li>
-          <li>Registrar e ponturar com precisão os parâmetros;</li>
+          <li>Registrar e pontuar com precisão os parâmetros;</li>
           <li>Realizar o cálculo NEWS 2</li>
           <li>
             Demonstrar o uso correto do NEWS 2 e associá-lo às respostas
