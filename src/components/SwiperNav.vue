@@ -19,7 +19,6 @@
         <span class="mdi mdi-chevron-right"></span>
         PRÓXIMO
       </button>
-      
     </div>
   </nav>
 </template>
@@ -30,30 +29,65 @@
 export default {
   name: "SwiperNav",
 
+  data() {
+    return {
+      prevSlide: "",
+      nextSlide: "",
+    };
+  },
+  methods: {
+    setData(prev, next) {
+      this.prevSlide = prev;
+      this.nextSlide = next;
+    },
+  },
   mounted() {
     const swiperEl = document.querySelector("swiper-container");
     const prevBtn = document.querySelector("#swiperPrev");
     const nextBtn = document.querySelector("#swiperNext");
 
+    const routes = this.$router.options.routes;
+    const route = this.$route.path;
+
+    for (let i = 0; i < routes.length; i++) {
+      if (route == routes[i].path) {
+        const prev = routes[i - 1];
+        const next = routes[i + 1];
+        this.setData(prev, next);
+      }
+    }
+
     prevBtn.addEventListener("click", () => {
-      swiperEl.swiper.slidePrev();
+      const SwiperSlidePrev = document.querySelector(".swiper-slide-prev");
+
+      if (SwiperSlidePrev != null) {
+        swiperEl.swiper.slideNext();
+      } else if (this.prevSlide != undefined) {
+        this.$router.push(this.prevSlide);
+      }
     });
 
     nextBtn.addEventListener("click", () => {
-      swiperEl.swiper.slideNext();
+      const SwiperSlideNext = document.querySelector(".swiper-slide-next");
+
+      if (SwiperSlideNext != null) {
+        swiperEl.swiper.slideNext();
+      } else if (this.nextSlide != undefined) {
+        this.$router.push(this.nextSlide);
+      }
     });
   },
 };
 </script>
 
 <style scoped>
-button{
+button {
   display: flex;
   align-items: center;
   padding-top: 0;
   padding-bottom: 0;
 }
-.mdi{
+.mdi {
   font-size: 24px;
 }
 </style>

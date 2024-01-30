@@ -9,39 +9,6 @@
             <div class="navbar-brand">
               <h1>Instruções do curso</h1>
             </div>
-            <!--
-            <div class="ms-auto navbar-nav nav-pagination d-flex flex-row">
-              <router-link class="nav-link" to="/">
-                Visão <br />Geral
-              </router-link>
-              <router-link class="nav-link" to="/1">
-                1
-                <br />
-                Medir
-              </router-link>
-              <router-link class="nav-link" to="/2">
-                2
-                <br />
-                Gravar
-              </router-link>
-              <router-link class="nav-link" to="/3"
-                >3
-                <br />
-                Calcular
-              </router-link>
-              <router-link class="nav-link" to="/4"
-                >4
-                <br />
-                Identificar
-              </router-link>
-              <router-link class="nav-link" to="/estudo-de-caso">
-                Estudo
-                <br />
-                de Caso
-              </router-link>
-              <router-link class="nav-link" to="/resumo"> Resumo </router-link>
-            </div>
--->
             <div class="ms-auto navbar-nav nav-pagination d-flex flex-row">
               <router-link
                 class="nav-link"
@@ -163,7 +130,7 @@ export default {
   border-color: white transparent transparent;
 }
 
-.nav-link{
+.nav-link {
   white-space: pre;
 }
 </style>
