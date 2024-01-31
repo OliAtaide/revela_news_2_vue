@@ -408,7 +408,7 @@ export default {
         .get("slide4.json")
         .then((res) => {
           var data = res.data;
-          this.perguntas = data.table;
+          this.perguntas = data.true_or_false;
           this.limites = data.limites;
           this.questoes = data.questoes;
         })

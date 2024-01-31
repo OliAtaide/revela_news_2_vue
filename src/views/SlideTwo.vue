@@ -366,7 +366,7 @@ export default {
         .get("slide2.json")
         .then((res) => {
           var data = res.data;
-          this.perguntas = data.table;
+          this.perguntas = data.true_or_false;
         })
         .catch((err) => console.log(err));
     },

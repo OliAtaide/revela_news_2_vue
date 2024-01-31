@@ -157,12 +157,30 @@
       ]
     }
   ],
-  "table": [
-    "Uma taxa respiratória reduzida é um indicador importante de depressão ou narcose do SNC.",
-    "O gráfico NEWS 2 tem 3 escalas de pontuação para SpO2",
-    "A pontuação de ponderação de 2 deve ser adicionada à pontuação NEWS 2 para qualuqer paciente que requer oxigênio suplementar",
-    "A pressão arterial sistólica baixa ou decrescente é mais significativa no contexto da avaliação da gravidade da doença aguda.",
-    "Em ACVPU o C significa confusão",
-    "Tanto a pirexia quando a hipotermia estão incluídas no sistema de pontuação NEWS 2."
+  "true_or_false": [
+    {
+      "texto": "Uma taxa respiratória reduzida é um indicador importante de depressão ou narcose do SNC.",
+      "verdadeiro": true
+    },
+    {
+      "texto": "O gráfico NEWS 2 tem 3 escalas de pontuação para SpO2",
+      "verdadeiro": false
+    },
+    {
+      "texto": "A pontuação de ponderação de 2 deve ser adicionada à pontuação NEWS 2 para qualuqer paciente que requer oxigênio suplementar",
+      "verdadeiro": true
+    },
+    {
+      "texto": "A pressão arterial sistólica baixa ou decrescente é mais significativa no contexto da avaliação da gravidade da doença aguda.",
+      "verdadeiro": true
+    },
+    {
+      "texto": "Em ACVPU o C significa confusão",
+      "verdadeiro": true
+    },
+    {
+      "texto": "Tanto a pirexia quando a hipotermia estão incluídas no sistema de pontuação NEWS 2.",
+      "verdadeiro": true
+    }
   ]
 }

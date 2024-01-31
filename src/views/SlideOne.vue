@@ -91,44 +91,7 @@
         Caro aluno, leia as declarações relacionadas aos parâmetros fisiológicos
         e selecione verdadeiro ou falso conforme os estudos realizados.
       </div>
-      <table class="table pf_declaracoes">
-        <thead>
-          <tr>
-            <th scope="col"></th>
-            <th scope="col">Verdadeiro</th>
-            <th scope="col">Falso</th>
-          </tr>
-        </thead>
-        <tbody v-for="(p, i) in perguntas" :key="i">
-          <tr>
-            <th scope="row">
-              {{ p }}
-            </th>
-            <td>
-              <label :for="'rb1' + i">
-                <input
-                  type="radio"
-                  title="verdadeiro"
-                  :name="'radio' + i"
-                  :id="'rb1' + i"
-                />
-                <div class="btn-radio"></div>
-              </label>
-            </td>
-            <td>
-              <label :for="'rb0' + i">
-                <input
-                  type="radio"
-                  title="falso"
-                  :name="'radio' + i"
-                  :id="'rb0' + i"
-                />
-                <div class="btn-radio"></div>
-              </label>
-            </td>
-          </tr>
-        </tbody>
-      </table>
+      <TrueFalseTable :perguntas="perguntas"></TrueFalseTable>
     </swiper-slide>
   </swiper-container>
   <SwiperNav></SwiperNav>
@@ -157,6 +120,7 @@
 <script>
 import ParametroFisiologico from "@/components/ParametroFisiologico.vue";
 import ParametroFisiologicoModal from "@/components/ParametroFisiologicoModal.vue";
+import TrueFalseTable from "@/components/TrueFalseTable.vue";
 import SwiperNav from "@/components/SwiperNav.vue";
 import axios from "axios";
 import { mapActions, mapMutations } from "vuex";
@@ -187,6 +151,7 @@ export default {
     SwiperNav,
     ParametroFisiologico,
     ParametroFisiologicoModal,
+    TrueFalseTable
   },
 
   methods: {
@@ -196,7 +161,7 @@ export default {
         .then((res) => {
           var data = res.data;
           this.parametros_fisiologicos = data.parametros_fisiologicos;
-          this.perguntas = data.table;
+          this.perguntas = data.true_or_false;
         })
         .catch((err) => console.log(err));
     },

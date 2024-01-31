@@ -57,5 +57,27 @@
     "Uma pontuação total NEWS 2 de 0 requer uma rotina de monitoramento dos sinais vitais.",
     "Para uma pontuação de 3 em um único parâmetro, considere sepse.",
     "Para uma pontuação NEWS 2 total de 5 ou mais, considere sepse."
+  ],
+  "true_or_false": [
+    {
+      "texto": "O risco clínico de uma pontuação agregada de 0 a 4 é baixo.",
+      "verdadeiro": true
+    },
+    {
+      "texto": "O risco clínico de uma pontuação agregada de 5 a 6 é alto.",
+      "verdadeiro": false
+    },
+    {
+      "texto": "Uma pontuação total NEWS 2 de 0 requer uma rotina de monitoramento dos sinais vitais.",
+      "verdadeiro": true
+    },
+    {
+      "texto": "Para uma pontuação de 3 em um único parâmetro, considere sepse.",
+      "verdadeiro": true
+    },
+    {
+      "texto": "Para uma pontuação NEWS 2 total de 5 ou mais, considere sepse.",
+      "verdadeiro": true
+    }
   ]
 }
