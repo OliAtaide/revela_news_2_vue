@@ -61,7 +61,7 @@ export default {
       const SwiperSlidePrev = document.querySelector(".swiper-slide-prev");
 
       if (SwiperSlidePrev != null) {
-        swiperEl.swiper.slideNext();
+        swiperEl.swiper.slidePrev();
       } else if (this.prevSlide != undefined) {
         this.$router.push(this.prevSlide);
       }

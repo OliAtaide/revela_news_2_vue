@@ -108,11 +108,11 @@
         },
         {
           "letra": "C",
-          "placeholder": "O paciente está alerta, mas <strong>CONFUSO</strong> ou desorientado",
+          "placeholder": "O paciente está alerta, mas, <strong>CONFUSO</strong> ou desorientado",
           "titulo": "Nova Confusão",
           "id": "ncpCModal",
           "texto": [
-            "Um paciente pode estar alerta, mas confuso ou desorientado. Nem sempre é possível determinar se este estado de confusão é “novo” quando um paciente se apreenta com uma doença aguda. Tal apresentação deve sempre despertar preocupação sobre as causas subjacentes, potencialmente graves e justificar uma avaliação clínica urgente.",
+            "Um paciente pode estar alerta, mas, confuso ou desorientado. Nem sempre é possível determinar se este estado de confusão é “novo” quando um paciente se apresenta com uma doença aguda. Tal apresentação deve sempre despertar preocupação sobre as causas subjacentes, potencialmente graves e justificar uma avaliação clínica urgente.",
             "Além do registro do nível de consciência, usando a escala ACVPU, você também deve considerar o início do estado mental agudamente alterado, por exemplo, uma nova confusão (delírio) pode ser um sinal importante de que o paciente requer avaliação urgente.",
             "A confusão incial (qualquer nova redução na escala de coma de Glasgow ou um delírio tmbém se enquadra neste critério) é um sinal de deterioração clínica potencialmente grave em pacientes, especialmente aqueles com sepse confirmada suspeita. O NEWS 2 inclui uma “nova confusão” como parte da avaliação de consciência, daí o termo ACVPU ao contrário de AVPU para refeltir essa mudança. Uma nova confusão marca 3 pontos no gráfico NEWS 2, indicando um código vermelho (quando uma única pontuação é 3), por exemplo, o paciente requer avaliação urgente."
           ]
