@@ -28,7 +28,7 @@
     },
     {
       "botao": "Total 5 ou mais",
-      "titulo": "Total de 5 ou mais<br/>limite de resposta urgente",
+      "titulo": "Total de 5 ou mais\nlimite de resposta urgente",
       "tempo": "Mínimo a cada 1 hora",
       "respostas": [
         "O enfermeiro deve informar imediatamente à equipe médica que está cuidando do paciente.",
@@ -39,7 +39,7 @@
     },
     {
       "botao": "Total de 7 ou mais",
-      "titulo": "Total de 7 ou mais<br/>limite de resposta de emergência",
+      "titulo": "Total de 7 ou mais\nlimite de resposta de emergência",
       "tempo": "Monitoramento contínuo dos sinais vitais",
       "respostas": [
         "O enfermeiro deve informar imediatamente à equipe médica que está cuidando do paciente - isso deve ser feito diretamente ao especialista.",

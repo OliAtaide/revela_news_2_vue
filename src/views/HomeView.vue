@@ -1,4 +1,31 @@
 <template>
+  <div
+    class="modal fade modal-resposta"
+    id="ul-dashed-modal"
+    tabindex="-1"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id=""></h1>
+        </div>
+        <div class="modal-body">
+          <p>Todas as frases estão corretas!</p>
+        </div>
+        <div class="modal-footer">
+          <button
+            class="nav-item btn btn-primary btn-proximo"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          >
+            CONTINUAR
+            <span class="mdi mdi-chevron-right"></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
   <div class="main">
     <swiper-container @slideChange="changeTitle">
       <swiper-slide>
@@ -184,28 +211,24 @@
             ENVIAR.
           </span>
         </div>
-        <ul class="ul-dashed">
-          <li>
-            O NEWS 2 possui recursos para o reconhecimento da deterioração
-            clínica do paciente.
-          </li>
-          <li>
-            O NEWS 2 define a triagem apropriada e o nível de cuidados
-            intensivos contínuos necessários.
-          </li>
-          <li>
-            O NEWS 2 padroniza a avaliação de doenças graves em contexto
-            pré-hospitalar.
-          </li>
-          <li>
-            O NEWS 2 permite uma comunicação através de linguagem simples e uma
-            avaliação padrão de doenças graves agudas.
-          </li>
-          <li>
-            O NEWS 2 facilita uma triagem mais eficiente e com melhores
-            indicadores de tratamento.
-          </li>
-        </ul>
+        <div class="ul-dashed">
+          <button
+            class="btn"
+            v-for="(b, i) in botoes"
+            :key="i"
+            role="button"
+            data-bs-toggle="button"
+          >
+            {{ b }}
+          </button>
+        </div>
+        <button
+          class="btn btn-primary"
+          data-bs-toggle="modal"
+          data-bs-target="#ul-dashed-modal"
+        >
+          ENVIAR
+        </button>
       </swiper-slide>
       <swiper-slide>
         <p>
@@ -261,6 +284,13 @@ export default {
         "Exceções do NEWS 2",
         "O processo do News 2",
       ],
+      botoes: [
+        "O NEWS 2 possui recursos para o reconhecimento da deterioração clínica do paciente.",
+        "O NEWS 2 define a triagem apropriada e o nível de cuidados intensivos contínuos necessários.",
+        "O NEWS 2 padroniza a avaliação de doenças graves em contexto pré-hospitalar.",
+        "O NEWS 2 permite uma comunicação através de linguagem simples e uma avaliação padrão de doenças graves agudas.",
+        "O NEWS 2 facilita uma triagem mais eficiente e com melhores indicadores de tratamento.",
+      ],
     };
   },
 
@@ -269,12 +299,13 @@ export default {
       console.log(window.$(".game .navbar-brand"));
       window.$(".game .navbar-brand").html("uwu");
     },
+    toggleButton() {},
     ...mapMutations(["setTitulos"]),
     ...mapActions(["setSwiperSettings"]),
   },
 
   mounted() {
-    this.$store.commit('setTitulos', this.titulos);
+    this.$store.commit("setTitulos", this.titulos);
     this.setSwiperSettings();
   },
 };
@@ -290,5 +321,26 @@ svg {
   text-align: center;
   border: 2px solid #262626;
   border-radius: 0;
+}
+
+.ul-dashed {
+  .btn {
+    cursor: pointer;
+    font-weight: 700;
+    border: 2px dashed black;
+    margin-bottom: 1em;
+    padding: 1em;
+    width: 100%;
+    text-align: start;
+    border-radius: 0;
+
+    &:hover {
+      background-color: #dbe0e7;
+    }
+
+    &.active {
+      background-color: #789f8c;
+    }
+  }
 }
 </style>

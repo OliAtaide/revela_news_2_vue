@@ -130,7 +130,7 @@ export default {
   border-color: white transparent transparent;
 }
 
-.nav-link {
+.nav-link, .table-urgencia th {
   white-space: pre;
 }
 </style>
