@@ -82,43 +82,22 @@
         </p>
         <ul class="ul-criticos">
           <li>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-              <title>alert-circle</title>
-              <path
-                d="M13,13H11V7H13M13,17H11V15H13M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z"
-              />
-            </svg>
-            <br />
+            <i class="bi bi-exclamation-circle-fill"></i>
             <span>
               Considere que os três elementos da resposta clínica considerados
               críticos são:
             </span>
           </li>
           <li>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-              <title>check-circle</title>
-              <path
-                d="M12 2C6.5 2 2 6.5 2 12S6.5 22 12 22 22 17.5 22 12 17.5 2 12 2M10 17L5 12L6.41 10.59L10 14.17L17.59 6.58L19 8L10 17Z"
-              />
-            </svg>
+            <i class="bi bi-check-circle-fill"></i>
             Diagnóstico precoce
           </li>
           <li>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-              <title>check-circle</title>
-              <path
-                d="M12 2C6.5 2 2 6.5 2 12S6.5 22 12 22 22 17.5 22 12 17.5 2 12 2M10 17L5 12L6.41 10.59L10 14.17L17.59 6.58L19 8L10 17Z"
-              />
-            </svg>
+            <i class="bi bi-check-circle-fill"></i>
             Oportunidade de resposta
           </li>
           <li>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-              <title>check-circle</title>
-              <path
-                d="M12 2C6.5 2 2 6.5 2 12S6.5 22 12 22 22 17.5 22 12 17.5 2 12 2M10 17L5 12L6.41 10.59L10 14.17L17.59 6.58L19 8L10 17Z"
-              />
-            </svg>
+            <i class="bi bi-check-circle-fill"></i>
             Competência
           </li>
         </ul>
@@ -312,8 +291,29 @@ export default {
 </script>
 
 <style scoped>
-svg {
-  width: 24px;
+.bi {
+  color: #426d6f;
+}
+
+.bi-exclamation-circle-fill {
+  font-size: 40px;
+}
+
+.bi-check-circle-fill {
+  font-size: 24px;
+}
+
+.ul-criticos li {
+  display: flex;
+  align-items: center;
+
+  &:first-child {
+    flex-direction: column;
+  }
+
+  &:not(:first-child) {
+    column-gap: 1em;
+  }
 }
 
 .card {
