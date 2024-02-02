@@ -177,7 +177,7 @@
           <span class="mdi mdi-cursor-default-click"></span>
           Cique no botão abaixo
         </div>
-        <button class="btn btn-primary p-4">
+        <button class="btn btn-primary p-4" @click="swipeNext">
           Mais formas de como usar o news 2
         </button>
       </swiper-slide>
@@ -281,6 +281,10 @@ export default {
     toggleButton() {},
     ...mapMutations(["setTitulos"]),
     ...mapActions(["setSwiperSettings"]),
+    swipeNext() {
+      const swiperEl = document.querySelector("swiper-container");
+      swiperEl.swiper.slideNext();
+    },
   },
 
   mounted() {
