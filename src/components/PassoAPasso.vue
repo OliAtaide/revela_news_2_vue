@@ -1,4 +1,14 @@
 <template>
+  <p>
+    Caro aluno, o NEWS 2 possui seis parâmetros fisiológicos. É primordial que
+    você documente todos eles ao fazer a avaliação clínica do paciente, pois
+    cada um é alocado com uma pontuação que reflete a magnitude do seu
+    distúrbio.
+  </p>
+  <p>
+    A pontuação individual de cada um dos parâmetros é então adicionada para
+    gerar o NEWS 2 total do paciente.
+  </p>
   <div class="nav nav-tabs" id="myTab" role="tablist">
     <button
       v-for="(p, i) in passos.slice().reverse()"
@@ -146,7 +156,7 @@ export default {
   border-right: 2px solid #262626 !important;
 }
 
-.tab-content{
+.tab-content {
   padding-top: 24px;
 }
 

@@ -142,7 +142,7 @@
           </li>
           <li>
             Ele garante meios padronizados de indentificar e responder aos
-            pacientes com deterioração grava não antecipada, em suas condições
+            pacientes com deterioração grave não antecipada, em suas condições
             clínicas, enquanto internados no hospital.
           </li>
         </ul>
@@ -212,7 +212,7 @@
       <swiper-slide>
         <p>
           Caro aluno, é importante que você tenha em mente que o NEWS 2 foi
-          desenhado para ser usado com adultos acima de 16 anos, Ele não é
+          desenhado para ser usado com adultos acima de 16 anos. Ele não é
           recomendado para o uso em crianças ou durante gravidez.
         </p>
         <p>
@@ -224,7 +224,7 @@
           Além disso, os resultados de NEWS 2 não são tão confiáveis em
           pacientes com a coluna vertebral danificada ou machuca, especialmente
           tetraplegia ou paraplegia de alto nível, devido a distúrbios
-          funcionais no sistema nervoso autônomo, Portanto, para esse quadro
+          funcionais no sistema nervoso autônomo. Portanto, para esse quadro
           clínico, use o NEWS 2 com cuidado.
         </p>
         <img src="@/assets/svg/slide-7.svg" alt="" />

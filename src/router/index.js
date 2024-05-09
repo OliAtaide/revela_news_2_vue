@@ -34,14 +34,14 @@ const routes = [
     component: SlideFour,
   },
   {
-    path: "/estudo-de-caso",
-    name: "Estudo\n de Caso",
-    component: EstudoDeCaso,
-  },
-  {
     path: "/resumo",
     name: "Resumo",
     component: ResumoPage,
+  },
+  {
+    path: "/estudo-de-caso",
+    name: "Estudo\n de Caso",
+    component: EstudoDeCaso,
   }
 ];
 

@@ -24,7 +24,7 @@
               </tr>
               <tr>
                 <td>
-                  M[ascara (de Venturi porcentagem, por exemplo B24 V28 V35 140
+                  Máscara (de Venturi porcentagem, por exemplo B24 V28 V35 140
                   180)
                 </td>
                 <td>
@@ -76,7 +76,7 @@
     <swiper-slide>
       <div class="aviso">
         <span class="mdi mdi-head-lightbulb"></span>
-        Caro aluno, vamo partir da imagem abaixo onde temos a temperatura média
+        Caro aluno, vamos partir da imagem abaixo onde temos a temperatura média
         de quatro pacientes representada Baseado no que você leu anteriormente
         sobre a pontuação NEWS 2, selecione na base do termômetro o valor
         apropriado. Para lhe ajudar, é possível abrir uma cópia do quadro de
@@ -91,46 +91,46 @@
           <div class="col">
             <p>34.0</p>
             <select name="cars" id="cars">
-              <option value="volvo">-</option>
-              <option value="saab">Saab</option>
-              <option value="mercedes">Mercedes</option>
-              <option value="audi">Audi</option>
+              <option value="volvo">1</option>
+              <option value="saab">2</option>
+              <option value="mercedes">3</option>
+              <option value="audi">4</option>
             </select>
           </div>
           <div class="col">
-            <p>34.0</p>
+            <p>35.6</p>
             <select name="cars" id="cars">
-              <option value="volvo">-</option>
-              <option value="saab">Saab</option>
-              <option value="mercedes">Mercedes</option>
-              <option value="audi">Audi</option>
+              <option value="volvo">1</option>
+              <option value="saab">2</option>
+              <option value="mercedes">3</option>
+              <option value="audi">4</option>
             </select>
           </div>
           <div class="col">
-            <p>34.0</p>
+            <p>36.1</p>
             <select name="cars" id="cars">
-              <option value="volvo">-</option>
-              <option value="saab">Saab</option>
-              <option value="mercedes">Mercedes</option>
-              <option value="audi">Audi</option>
+              <option value="volvo">1</option>
+              <option value="saab">2</option>
+              <option value="mercedes">3</option>
+              <option value="audi">4</option>
             </select>
           </div>
           <div class="col">
-            <p>34.0</p>
+            <p>39.0</p>
             <select name="cars" id="cars">
-              <option value="volvo">-</option>
-              <option value="saab">Saab</option>
-              <option value="mercedes">Mercedes</option>
-              <option value="audi">Audi</option>
+              <option value="volvo">1</option>
+              <option value="saab">2</option>
+              <option value="mercedes">3</option>
+              <option value="audi">4</option>
             </select>
           </div>
           <div class="col">
-            <p>34.0</p>
+            <p>39.5</p>
             <select name="cars" id="cars">
-              <option value="volvo">-</option>
-              <option value="saab">Saab</option>
-              <option value="mercedes">Mercedes</option>
-              <option value="audi">Audi</option>
+              <option value="volvo">1</option>
+              <option value="saab">2</option>
+              <option value="mercedes">3</option>
+              <option value="audi">4</option>
             </select>
           </div>
         </div>
@@ -286,7 +286,7 @@
       <p>
         Caro aluno, observe que quando o oxigênio suplementar está sendo usado
         para manter a saturação do oxigênio desejado, a taxa de fornecimento de
-        oxigênio (L/min.) e o sistema dispositivo de forncimento, devem ser
+        oxigênio (L/min.) e o sistema dispositivo de fornecimento, devem ser
         documentados no gráfico NEWS 2, usando os dois códigos do sistema
         dispositivo de fornecimento de oxigênio BTS.
       </p>

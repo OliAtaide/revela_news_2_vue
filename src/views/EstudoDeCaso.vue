@@ -37,7 +37,7 @@
       </p>
       <p>
         Se você deseja rever qualquer material de estudo em qualquer ponto, você
-        pode fazê-lo usando as abas do menu no topo da página.”.
+        pode fazê-lo usando as abas do menu no topo da página.
       </p>
       <button
         class="btn btn-primary text-center py-3 px-5 text-uppercase"

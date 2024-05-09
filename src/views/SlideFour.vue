@@ -7,7 +7,7 @@
       <div class="row">
         <div class="col-sm">
           <p>
-            Caro aluno; quando um paciente apresenta, inicialmente, uma doen;a
+            Caro aluno, quando um paciente apresenta, inicialmente, uma doen;a
             aguda ou sofre uma deterioração aguda de sua condição clínica, o
             NEWS 2 ajuda a determinar a urgência e a escala de respostas clínica
             necessária.
@@ -36,7 +36,7 @@
               </tr>
               <tr>
                 <td>
-                  Pontuação de 13 em qualuqer parâmetro individual (pontuação
+                  Pontuação de 13 em qualquer parâmetro individual (pontuação
                   vermelha)
                 </td>
                 <td>Médio-baixo</td>
