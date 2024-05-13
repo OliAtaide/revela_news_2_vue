@@ -686,6 +686,10 @@ table:not(.estudo-tabela) {
     }
 }
 
-.news2total{
-    background-color: #EEC174;
+.nav-link-resposta{
+    border-radius: 0 !important;
+}
+
+.nav-link-resposta.nav-link-active{
+    border: 2px solid black !important;
 }

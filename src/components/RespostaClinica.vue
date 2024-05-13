@@ -36,11 +36,11 @@
         <button
           type="button"
           :data-btn="'#btnSend' + i"
-          class="nav-link"
+          class="nav-link nav-link-resposta"
           :style="'background-color:' + l.color + '!important;'"
           :value="i"
           :data-index="index"
-          @click="setData(i)"
+          @click="setData(i, $event)"
         >
           {{ l.botao }}
         </button>
@@ -61,7 +61,7 @@
 </template>
 
 <script>
-//import $ from "jquery";
+import $ from "jquery";
 
 export default {
   name: "RespostaClinica",
@@ -75,8 +75,11 @@ export default {
   },
 
   methods: {
-    setData(v) {
+    setData(v, event) {
       this.valor = v;
+      $('.nav-link-resposta').removeClass('nav-link-active');
+      $(event.target).addClass('nav-link-active');
+      console.log(event.target)
     },
     sendData(m) {
       if (this.questao == this.valor) {
