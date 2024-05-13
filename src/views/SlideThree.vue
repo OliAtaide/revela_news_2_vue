@@ -17,10 +17,16 @@
           </div>
           <div class="form-control btn mb-3 news2total">
             NEWS2 TOTAL
-            <input title="NEWS2 TOTAL" type="number" />
+            <input
+              title="NEWS2 TOTAL"
+              type="number"
+              @input="(event) => (news2total = event.target.value)"
+            />
           </div>
           <br />
-          <div class="btn btn-primary btn-enviar">ENVIAR</div>
+          <div class="btn btn-primary btn-enviar" @click="News2Total">
+            ENVIAR
+          </div>
         </div>
         <div class="col-sm-5">
           <img src="@/assets/table3.png" alt="" class="img-fluid" />
@@ -32,8 +38,9 @@
         <div class="col-sm-7">
           <p>
             Caro aluno, além de calcular a pontuação total de NEWS 2, qualquer
-            <strong style="color: red;">pontuação vermelha</strong> única, ou seja, uma pontuação de 3 em um único
-            parâmetro, deve ser identificada.
+            <strong style="color: red">pontuação vermelha</strong> única, ou
+            seja, uma pontuação de 3 em um único parâmetro, deve ser
+            identificada.
           </p>
           <p>
             Pontuações vermelhas podem determinar a resposta clínica, como será
@@ -55,14 +62,17 @@
       <TrueFalseTable :perguntas="perguntas"></TrueFalseTable>
     </swiper-slide>
   </swiper-container>
+  <News2TotalModal></News2TotalModal>
   <SwiperNav></SwiperNav>
 </template>
 
 <script>
 import axios from "axios";
 import TrueFalseTable from "@/components/TrueFalseTable.vue";
+import News2TotalModal from "@/components/News2TotalModal.vue";
 import SwiperNav from "@/components/SwiperNav.vue";
 import { mapActions, mapMutations } from "vuex";
+import $ from "jquery";
 
 export default {
   name: "SlideThree",
@@ -71,12 +81,14 @@ export default {
     return {
       perguntas: [],
       titulos: ["Calculando uma pontuação", "Uma pontuação vermelha", "Quiz"],
+      news2total: 0,
     };
   },
 
   components: {
     SwiperNav,
     TrueFalseTable,
+    News2TotalModal,
   },
 
   methods: {
@@ -88,6 +100,10 @@ export default {
           this.perguntas = data.true_or_false;
         })
         .catch((err) => console.log(err));
+    },
+    News2Total() {
+      let isCorrect = this.news2total == 9;
+      $("#News2TotalModal" + (isCorrect ? 1 : 0)).modal("show");
     },
     ...mapMutations(["setTitulos"]),
     ...mapActions(["setSwiperSettings"]),
