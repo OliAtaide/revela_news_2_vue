@@ -9,6 +9,10 @@
     <p v-for="(t, i) in parametro.texto" :key="i">
       {{ t }}
     </p>
+    <p class="dica2" v-if="parametro.modais != null">
+      Para aprofundar seus estudos, clique nos seguintes botões para mais
+      informações.
+    </p>
     <div class="d-flex flex-column gap-3">
       <button
         class="btn btn-primary w-25 py-3"
@@ -20,7 +24,9 @@
         {{ b.titulo }}
       </button>
     </div>
-
+    <p class="dica2" v-if="parametro.ncp != null">
+      Clique nos botões abaixo para mais informações
+    </p>
     <div class="d-flex row_nc">
       <button
         v-for="(n, i) in parametro.ncp"

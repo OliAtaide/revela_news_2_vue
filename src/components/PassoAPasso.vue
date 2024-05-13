@@ -9,6 +9,11 @@
     A pontuação individual de cada um dos parâmetros é então adicionada para
     gerar o NEWS 2 total do paciente.
   </p>
+  <div class="dica dica2 d-flex mb-3">
+    <span class="mdi mdi-cursor-default-click"></span>
+    Esse processo pode ser feito em quatro passos. Agora, clique em cada um dos
+    botões abaixo para saber mais informações sobre cada um deles
+  </div>
   <div class="nav nav-tabs" id="myTab" role="tablist">
     <button
       v-for="(p, i) in passos.slice().reverse()"

@@ -363,8 +363,15 @@ swiper-slide {
 .dica {
     align-items: center;
     gap: 0.5em;
+}
+
+.dica, .dica .mdi{
     color: #426d6f;
-    font-size: 24px;
+    font-size: 24px !important;
+}
+
+.dica2, .dica2 .mdi{
+    color: #704343 !important;
 }
 
 table:not(.estudo-tabela) {
@@ -677,4 +684,8 @@ table:not(.estudo-tabela) {
     .link-proximo {
         display: none;
     }
+}
+
+.news2total{
+    background-color: #EEC174;
 }

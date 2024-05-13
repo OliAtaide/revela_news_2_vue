@@ -68,6 +68,10 @@
       "verdadeiro": false
     },
     {
+      "texto": "Um componente da resposta clínica é a frequência de monitoramento.",
+      "verdadeiro": true
+    },
+    {
       "texto": "Uma pontuação total NEWS 2 de 0 requer uma rotina de monitoramento dos sinais vitais.",
       "verdadeiro": true
     },

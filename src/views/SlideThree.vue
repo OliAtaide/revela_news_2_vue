@@ -11,7 +11,11 @@
             Rola para baixo o gráfico já preenchido e calcule a pontuação total
             de NEWS 2 na quarta coluna.
           </p>
-          <div class="form-control btn mb-3">
+          <div class="dica dica2 d-flex mb-3">
+            <span class="mdi mdi-cursor-default-click"></span>
+            Digite sua resposta na caixa abaixo e clique em enviar.
+          </div>
+          <div class="form-control btn mb-3 news2total">
             NEWS2 TOTAL
             <input title="NEWS2 TOTAL" type="number" />
           </div>
@@ -28,7 +32,7 @@
         <div class="col-sm-7">
           <p>
             Caro aluno, além de calcular a pontuação total de NEWS 2, qualquer
-            pontuação vermelha única, ou seja, uma pontuação de 3 em um único
+            <strong style="color: red;">pontuação vermelha</strong> única, ou seja, uma pontuação de 3 em um único
             parâmetro, deve ser identificada.
           </p>
           <p>
@@ -102,18 +106,18 @@ export default {
 
 <style>
 .form-control {
-  border: 1px solid #262626;
-  background-color: #eec174;
-  border-radius: 0;
-  font-weight: 700;
+  border: 1px solid #262626 !important;
+  background-color: #eec174 !important;
+  border-radius: 0 !important;
+  font-weight: 700 !important;
   width: auto !important;
-  font-size: 17px;
+  font-size: 17px !important;
 
   input {
-    width: 60px;
-    padding: 8px 0;
-    text-align: center;
-    font-weight: 700;
+    width: 60px !important;
+    padding: 8px 0 !important;
+    text-align: center !important;
+    font-weight: 700 !important;
   }
 }
 </style>

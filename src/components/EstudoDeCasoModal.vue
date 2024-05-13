@@ -53,7 +53,7 @@
           </div>
         </div>
         <div class="modal-footer">
-          <button class="nav-item btn btn-primary btn-proximo">
+          <button class="nav-item btn btn-primary btn-proximo" data-bs-dismiss="modal" >
             PRÓXIMO
             <span class="mdi mdi-chevron-right"></span>
           </button>

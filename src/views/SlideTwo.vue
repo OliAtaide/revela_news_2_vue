@@ -40,7 +40,7 @@
           </table>
         </div>
         <div class="modal-footer">
-          <button class="nav-item btn btn-primary btn-proximo">
+          <button class="nav-item btn btn-primary btn-proximo" data-bs-dismiss="modal"> 
             CONTINUAR
             <span class="mdi mdi-chevron-right"></span>
           </button>
@@ -298,6 +298,10 @@
             tubo nasal canular.
           </i>
         </p>
+      </div>
+      <div class="dica dica2 d-flex mb-3">
+        <span class="mdi mdi-cursor-default-click"></span>
+        Para aprofundar seus estudos, clique no botão abaixo. 
       </div>
       <button
         class="btn btn-primary w-25 mb-3"
