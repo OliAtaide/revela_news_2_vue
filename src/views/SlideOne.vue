@@ -21,33 +21,18 @@
         em enviar.
       </div>
       <div class="row row-cols-3">
-        <div class="col">
-          <div class="item_dashed">Idade do paciente</div>
+        <div class="col" v-for="b in botoes_parametros" :key="b">
+          <div class="item_dashed" @click="parametroClick">{{ b }}</div>
         </div>
-        <div class="col">
-          <div class="item_dashed">Frequência respiratória</div>
-        </div>
-        <div class="col">
-          <div class="item_dashed">Nível de consciência</div>
-        </div>
-        <div class="col">
-          <div class="item_dashed">Volume de urinia</div>
-        </div>
-        <div class="col">
-          <div class="item_dashed">Temperatura</div>
-        </div>
-        <div class="col">
-          <div class="item_dashed">Nível de glicose no sangue</div>
-        </div>
-        <div class="col">
-          <div class="item_dashed">Saturação de oxigênio</div>
-        </div>
-        <div class="col">
-          <div class="item_dashed">Pulso</div>
-        </div>
-        <div class="col">
-          <div class="item_dashed">Pressão sanguínea sistólica</div>
-        </div>
+      </div>
+      <div class="d-flex justify-content-end">
+        <button
+          class="btn btn-primary p-3"
+          data-bs-toggle="modal"
+          data-bs-target="#ParametrosCertosModal"
+        >
+          ENVIAR
+        </button>
       </div>
     </swiper-slide>
     <swiper-slide>
@@ -114,6 +99,8 @@
       :parametro="i"
       :index="j"
     ></ParametroFisiologicoModal>
+    <ParametrosCertosModal>
+    </ParametrosCertosModal>
   </div>
 </template>
 
@@ -124,12 +111,25 @@ import TrueFalseTable from "@/components/TrueFalseTable.vue";
 import SwiperNav from "@/components/SwiperNav.vue";
 import axios from "axios";
 import { mapActions, mapMutations } from "vuex";
+import $ from "jquery";
+import ParametrosCertosModal from "@/components/ParametrosCertosModal.vue";
 
 export default {
   name: "SlideOne",
 
   data() {
     return {
+      botoes_parametros: [
+        "Idade do paciente",
+        "Frequência respiratória",
+        "Nível de consciência",
+        "Volume de urinia",
+        "Temperatura",
+        "Nível de glicose no sangue",
+        "Saturação de oxigênio",
+        "Pulso",
+        "Pressão sanguínea sistólica",
+      ],
       parametros_fisiologicos: [],
       perguntas: [],
       slider: null,
@@ -151,7 +151,8 @@ export default {
     SwiperNav,
     ParametroFisiologico,
     ParametroFisiologicoModal,
-    TrueFalseTable
+    TrueFalseTable,
+    ParametrosCertosModal,
   },
 
   methods: {
@@ -168,6 +169,9 @@ export default {
     parametroSlide(index) {
       const swiperEl = document.querySelector("swiper-container");
       swiperEl.swiper.slideTo(index);
+    },
+    parametroClick(event) {
+      $(event.target).toggleClass("item_dashed_active");
     },
     ...mapMutations(["setTitulos"]),
     ...mapActions(["setSwiperSettings"]),

@@ -240,6 +240,11 @@ svg {
     margin-bottom: 1em;
     padding: 1em;
     text-align: center;
+    cursor: pointer;
+}
+
+.item_dashed_active{
+    background-color: lightgray;
 }
 
 swiper-container,
