@@ -25,7 +25,13 @@
                   <th class="bg-white"></th>
                   <td class="btn-primary">
                     <h6 class="my-auto text-white">NEWS 2 Total</h6>
-                    <input class="ms-auto" type="number" min="0" />
+                    <input
+                      disabled
+                      class="ms-auto"
+                      type="number"
+                      min="0"
+                      :value="getTotal()"
+                    />
                   </td>
                 </tr>
               </table>
@@ -38,22 +44,59 @@
               <h6>Faça a escolha abaixo</h6>
               <div class="row row-escolhas my-3">
                 <div class="col">
-                  <button class="btn btn-primary text-center w-100">Sim</button>
+                  <button
+                    class="btn btn-primary text-center w-100"
+                    :data-target="'#sepse' + index"
+                    @click="showSepse"
+                  >
+                    Sim
+                  </button>
                 </div>
                 <div class="col">
-                  <button class="btn btn-primary text-center w-100">Não</button>
+                  <button
+                    class="btn btn-primary text-center w-100"
+                    :data-target="'#sepse' + index"
+                    @click="showSepse"
+                  >
+                    Não
+                  </button>
                 </div>
               </div>
-              <p>Sim, pense em sepse!</p>
-              <p>
-                Para uma pontuação total de 5 ou mais, sepse deve ser
-                considerada
-              </p>
+              <div
+                v-if="estudo.sepse"
+                class="sepse"
+                :id="'sepse' + index"
+                style="display: none"
+              >
+                <p>Sim, pense em sepse!</p>
+                <p>
+                  Para uma pontuação total de 5 ou mais, sepse deve ser
+                  considerada
+                </p>
+              </div>
+              <div
+                v-else
+                class="sepse"
+                :id="'sepse' + index"
+                style="display: none"
+              >
+                <p>
+                  Para esse paciente a sepse não precisa ser considerada, pois:
+                </p>
+                <p>
+                  A pontuação total é menor que 5; Nenhum parâmetro tem
+                  pontuação de 3.
+                </p>
+              </div>
             </div>
           </div>
         </div>
         <div class="modal-footer">
-          <button class="nav-item btn btn-primary btn-proximo" data-bs-dismiss="modal" >
+          <button
+            class="nav-item btn btn-primary btn-proximo"
+            data-bs-dismiss="modal"
+            @click="swiperNext()"
+          >
             PRÓXIMO
             <span class="mdi mdi-chevron-right"></span>
           </button>
@@ -64,9 +107,35 @@
 </template>
 
 <script>
+import $ from "jquery";
+
 export default {
   name: "EstuidoDeCasoModal",
 
   props: ["labels", "estudo", "index"],
+
+  methods: {
+    showSepse(event) {
+      const index = $(event.target).data("target");
+      $(index).show();
+    },
+    getTotal() {
+      let total = 0;
+      this.estudo.respostas.forEach((d) => {
+        total += d;
+      });
+      return total;
+    },
+    swiperNext() {
+      const swiperEl = document.querySelector("swiper-container");
+      swiperEl.swiper.slideNext();
+    },
+  },
 };
 </script>
+
+<style scoped>
+.btn-primary h6 {
+  background-color: transparent;
+}
+</style>

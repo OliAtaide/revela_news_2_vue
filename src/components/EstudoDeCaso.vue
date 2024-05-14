@@ -79,12 +79,55 @@
             gatilho inicial clicando no botão correto abaixo:
           </p>
 
-          <ul
-            class="nav nav-tabs nav-resposta nav-justified gap-3 border-0 mb-4"
-            id="myTab"
-            role="tablist"
-          ></ul>
-          <div class="tab-content nav-content-resposta" id="myTabContent"></div>
+          <div class="row row-cols-5 nav-resposta mb-4">
+            <div
+              class="col"
+              role="presentation"
+              v-for="(l, i) in limites"
+              :key="i"
+            >
+              <button
+                class="w-100 h-100 fw-bold border-0"
+                :id="'limitebtn' + i"
+                :data-index="i"
+                @mouseover="limiteHover"
+                type="button"
+                :style="'background-color:' + l.color + '!important;'"
+                data-bs-toggle="modal"
+                :data-bs-target="'#estudoModal' + index"
+              >
+                {{ l.botao }}
+              </button>
+            </div>
+          </div>
+          <div class="nav-content-resposta" id="myTabContent">
+            <div
+              :id="'limite' + i"
+              v-for="(l, i) in limites"
+              :key="i"
+              class="limite"
+              style="display: none"
+            >
+              <table class="table-urgencia w-100">
+                <tbody>
+                  <th
+                    class="p-3"
+                    :style="'background-color:' + l.color + '!important;'"
+                  >
+                    {{ l.titulo }}
+                  </th>
+                  <td>{{ l.tempo }}</td>
+                  <td>
+                    <ul>
+                      <li v-for="(r, j) in l.respostas" :key="j">
+                        {{ r }}
+                      </li>
+                    </ul>
+                  </td>
+                </tbody>
+              </table>
+            </div>
+          </div>
         </div>
         <div class="col">
           <table class="table estudo-tabela">
@@ -109,14 +152,6 @@
         </div>
       </div>
     </div>
-    <button
-      type="button"
-      class="btn btn-primary"
-      data-bs-toggle="modal"
-      :data-bs-target="'#estudoModal' + index"
-    >
-      Launch demo modal
-    </button>
   </swiper-slide>
 </template>
 
@@ -126,14 +161,14 @@ import $ from "jquery";
 export default {
   name: "EstudoDeCaso",
 
-  props: ["labels", "estudo", "index"],
+  props: ["labels", "estudo", "index", "limites"],
 
   methods: {
     getData(data) {
       const icone = $($(data.target).data("icone"));
       const resposta = $(data.target).data("resposta");
       const val = $(data.target).val();
-      
+
       if (resposta == val) {
         icone.removeClass("bi-x-circle");
         icone.addClass("bi-check-circle");
@@ -161,6 +196,11 @@ export default {
         icone.addClass("bi-x-circle");
       }
     },
+    limiteHover(event) {
+      const index = $(event.target).data("index");
+      $(".limite").hide();
+      $("#limite" + index).show();
+    },
   },
 };
 </script>
@@ -174,5 +214,22 @@ th,
 td {
   padding-top: 8px;
   padding-bottom: 8px;
+}
+
+.nav-item {
+  width: 20%;
+}
+
+.nav-link {
+  padding: 1em;
+  word-break: break-all;
+}
+
+.limite table{
+  table-layout: fixed !important;
+}
+
+.limite th, .limite .td{
+  white-space: wrap;
 }
 </style>

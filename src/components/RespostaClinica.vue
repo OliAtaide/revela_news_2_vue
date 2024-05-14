@@ -79,7 +79,6 @@ export default {
       this.valor = v;
       $('.nav-link-resposta').removeClass('nav-link-active');
       $(event.target).addClass('nav-link-active');
-      console.log(event.target)
     },
     sendData(m) {
       if (this.questao == this.valor) {

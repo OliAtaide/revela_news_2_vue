@@ -275,7 +275,6 @@ export default {
 
   methods: {
     changeTitle() {
-      console.log(window.$(".game .navbar-brand"));
       window.$(".game .navbar-brand").html("uwu");
     },
     toggleButton() {},

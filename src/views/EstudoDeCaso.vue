@@ -29,6 +29,7 @@
       :estudo="e"
       :labels="labels"
       :index="i"
+      :limites="limites"
     ></EstudoDeCaso>
     <swiper-slide>
       <p>
@@ -99,6 +100,7 @@ export default {
         "Estudo de Caso 5",
         "Estudos de Caso",
       ],
+      limites: []
     };
   },
 
@@ -108,6 +110,14 @@ export default {
         .get("estudos.json")
         .then((res) => {
           this.estudos = res.data;
+        })
+        .catch((err) => console.log(err));
+
+      axios
+        .get("slide4.json")
+        .then((res) => {
+          var data = res.data;
+          this.limites = data.limites;
         })
         .catch((err) => console.log(err));
     },
