@@ -48,8 +48,20 @@
               <th class="bg-white"></th>
               <td class="btn-primary">
                 <h6 class="my-auto text-white">Cálculo</h6>
-                <input class="ms-auto" type="number" min="0" />
+                <input
+                  class="ms-auto"
+                  type="number"
+                  min="0"
+                  :data-icone="'#iconeResposta' + index + '_Total'"
+                  @change="getTotalData"
+                />
               </td>
+              <th class="bg-white px-0 ps-3">
+                <i
+                  class="bi icone-resposta"
+                  :id="'iconeResposta' + index + '_Total'"
+                ></i>
+              </th>
             </tr>
           </table>
         </div>
@@ -84,7 +96,13 @@
               <th class="bg-white"></th>
               <td class="btn-primary">
                 <h6 class="my-auto text-white">NEWS 2 Total</h6>
-                <input class="ms-auto" type="number" min="0" />
+                <input
+                  disabled
+                  class="ms-auto"
+                  type="number"
+                  min="0"
+                  :value="getTotal()"
+                />
               </td>
             </tr>
           </table>
@@ -103,7 +121,7 @@
 </template>
 
 <script>
-import $ from 'jquery';
+import $ from "jquery";
 
 export default {
   name: "EstudoDeCaso",
@@ -112,14 +130,33 @@ export default {
 
   methods: {
     getData(data) {
-      const icone = $($(data.target).data('icone'));
-      const resposta = $(data.target).data('resposta');
+      const icone = $($(data.target).data("icone"));
+      const resposta = $(data.target).data("resposta");
       const val = $(data.target).val();
-      if(resposta == val){
+      
+      if (resposta == val) {
         icone.removeClass("bi-x-circle");
         icone.addClass("bi-check-circle");
+      } else {
+        icone.removeClass("bi-check-circle");
+        icone.addClass("bi-x-circle");
       }
-      else{
+    },
+    getTotal() {
+      let total = 0;
+      this.estudo.respostas.forEach((d) => {
+        total += d;
+      });
+      return total;
+    },
+    getTotalData(data) {
+      const icone = $($(data.target).data("icone"));
+      const val = $(data.target).val();
+
+      if (val == this.getTotal()) {
+        icone.removeClass("bi-x-circle");
+        icone.addClass("bi-check-circle");
+      } else {
         icone.removeClass("bi-check-circle");
         icone.addClass("bi-x-circle");
       }
