@@ -16,7 +16,8 @@
               enviar.
             </div>
             <div class="balao balao-2 w-75 mt-auto">
-              Você pode acessar o gráfico NEWS2 clicando no botão recursos abaixo.
+              Você pode acessar o gráfico NEWS2 clicando no botão recursos
+              abaixo.
             </div>
           </div>
         </div>
@@ -30,6 +31,7 @@
                   class="input-resposta ms-auto"
                   type="number"
                   min="0"
+                  @change="getData"
                   :data-resposta="estudo.respostas[i]"
                   :data-icone="'#iconeResposta' + index + '_' + i"
                 />
@@ -101,10 +103,28 @@
 </template>
 
 <script>
+import $ from 'jquery';
+
 export default {
   name: "EstudoDeCaso",
 
   props: ["labels", "estudo", "index"],
+
+  methods: {
+    getData(data) {
+      const icone = $($(data.target).data('icone'));
+      const resposta = $(data.target).data('resposta');
+      const val = $(data.target).val();
+      if(resposta == val){
+        icone.removeClass("bi-x-circle");
+        icone.addClass("bi-check-circle");
+      }
+      else{
+        icone.removeClass("bi-check-circle");
+        icone.addClass("bi-x-circle");
+      }
+    },
+  },
 };
 </script>
 
@@ -113,7 +133,8 @@ table h6 {
   background-color: transparent !important;
 }
 
-th, td {
+th,
+td {
   padding-top: 8px;
   padding-bottom: 8px;
 }
