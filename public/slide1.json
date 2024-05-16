@@ -12,7 +12,7 @@
       "titulo": "Saturação de Oxigênio (SpO2)",
       "icone": "oxygen_tank",
       "texto": [
-        "Caro aluno, aqui você observará que o quadro NEWS2 traz duas pontuações pata documentar as saturações de oxigênio. A escala 1 deve ser usada para a maioria dos pacientes, entretanto, para pacientes com insuficiência respiratória hipercápnica a Escala 2 deve ser usada."
+        "Caro aluno, aqui você observará que o quadro NEWS2 traz duas pontuações pata documentar as saturações de oxigênio. A Escala 1 deve ser usada para a maioria dos pacientes, entretanto, para pacientes com insuficiência respiratória hipercápnica a Escala 2 deve ser usada."
       ],
       "dica": "Para prosseguir e ter mais informações sobre cada uma das escolas, clique nos botões abaixo:",
       "modais": [
@@ -28,10 +28,10 @@
           "titulo": "Escala 2",
           "id": "escala2Modal",
           "texto": [
-            "Caro aluno, a escala 2 é um sistema de pontuação dedicado aos pacientes com insuficiência respiratória hipercápnica, cuja saturação de oxigência ideal é definida em um nível inferior (88-92%) com o sistema de pontuação NEWS 2 ajustado adequadamente.",
+            "Caro aluno, a Escala 2 é um sistema de pontuação dedicado aos pacientes com insuficiência respiratória hipercápnica, cuja saturação de oxigência ideal é definida em um nível inferior (88-92%) com o sistema de pontuação NEWS 2 ajustado adequadamente.",
             "Observe que esta escala de pontuação SpO2 é para pacientes com uma necessidade de oxigenação prescrita entre 88-92%, por exemplo, em pacientes com insuficiencia respiratória hipercápnica, confirmada através da análise de gases sanguíneos em um hospital prévio ou naquele em que ocorreu sua internação.",
-            "É importante ressaltar que a decisão de usar a nova SpO2, pontuando com base na escala 2, deve ser tomada através de uma decisão clínica competente, que precisa ser documentada na ficha clínica/prontuário do paciente.",
-            "Fique atento, pois em todas as outras circunstâncias, a escala normal de pontuação NEWS2 SpO2 (escala 1) deve ser usada.",
+            "É importante ressaltar que a decisão de usar a nova SpO2, pontuando com base na Escala 2, deve ser tomada através de uma decisão clínica competente, que precisa ser documentada na ficha clínica/prontuário do paciente.",
+            "Fique atento, pois em todas as outras circunstâncias, a escala normal de pontuação NEWS2 SpO2 (Escala 1) deve ser usada.",
             "A fim de evitar dúvidas, a escala de pontuação SpO2 que não está sendo usada, deve ser riscada no quadro de pontuação."
           ]
         }

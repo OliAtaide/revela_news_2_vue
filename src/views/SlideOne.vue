@@ -123,7 +123,7 @@ export default {
         "Idade do paciente",
         "Frequência respiratória",
         "Nível de consciência",
-        "Volume de urinia",
+        "Volume de urina",
         "Temperatura",
         "Nível de glicose no sangue",
         "Saturação de oxigênio",

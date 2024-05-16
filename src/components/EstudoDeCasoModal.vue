@@ -93,9 +93,8 @@
         </div>
         <div class="modal-footer">
           <button
-            class="nav-item btn btn-primary btn-proximo"
+            class="nav-item btn btn-primary modal-next"
             data-bs-dismiss="modal"
-            @click="swiperNext()"
           >
             PRÓXIMO
             <span class="mdi mdi-chevron-right"></span>
@@ -128,6 +127,7 @@ export default {
     },
     swiperNext() {
       const swiperEl = document.querySelector("swiper-container");
+
       swiperEl.swiper.slideNext();
     },
   },

@@ -190,7 +190,7 @@
           <p>
             Caro aluno, veja que neste gráfico de observações, as pontuações de
             frequência respiratória foram registradas. Assim, usando os dados a
-            seguir, registre as pontuações de SpO2 escala 1 no gráfico, clicando
+            seguir, registre as pontuações de SpO2 Escala 1 no gráfico, clicando
             nas caixas corretas.
           </p>
           <p>
@@ -259,11 +259,11 @@
           </p>
           <ul>
             <li>
-              A escala 1 é a escala usual para pacientes em que uma saturação de
+              A Escala 1 é a escala usual para pacientes em que uma saturação de
               oxigênio normal é esperada.
             </li>
             <li>
-              A escala 2 é a escala a ser usada para pacientes com insuficiência
+              A Escala 2 é a escala a ser usada para pacientes com insuficiência
               respiratória hipercápnica e uma faixa de saturação de oxigênio
               recomendada de 88-92%
             </li>
