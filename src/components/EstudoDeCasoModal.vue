@@ -69,7 +69,10 @@
                 style="display: none"
               >
                 <p>Sim, pense em sepse!</p>
-                <p>
+                <p v-if="index == 4">
+                  Com esse paciente a sepse deve ser considerada. Mesmo que o total seja menor de 5, um 3 (pontuação vermelha) para frequência respiratória foi documentado.
+                </p>
+                <p v-else>
                   Para uma pontuação total de 5 ou mais, sepse deve ser
                   considerada
                 </p>
@@ -83,10 +86,10 @@
                 <p>
                   Para esse paciente a sepse não precisa ser considerada, pois:
                 </p>
-                <p>
-                  A pontuação total é menor que 5; Nenhum parâmetro tem
-                  pontuação de 3.
-                </p>
+                <ul>
+                  <li>A pontuação total é menor que 5;</li>
+                  <li>Nenhum parâmetro tem pontuação de 3.</li>
+                </ul>
               </div>
             </div>
           </div>

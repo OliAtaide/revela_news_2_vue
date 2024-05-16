@@ -88,8 +88,8 @@
             >
               <button
                 class="w-100 h-100 fw-bold border-0"
-                :id="'limitebtn' + i"
-                :data-index="i"
+                :id="'limitebtn' + index + i"
+                :data-index="'' + index + i"
                 @mouseover="limiteHover"
                 type="button"
                 :style="'background-color:' + l.color + '!important;'"
@@ -102,7 +102,7 @@
           </div>
           <div class="nav-content-resposta" id="myTabContent">
             <div
-              :id="'limite' + i"
+              :id="'limite' + index + i"
               v-for="(l, i) in limites"
               :key="i"
               class="limite"
