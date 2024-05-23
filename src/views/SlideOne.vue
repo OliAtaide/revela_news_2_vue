@@ -99,9 +99,10 @@
       :parametro="i"
       :index="j"
     ></ParametroFisiologicoModal>
-    <ParametrosCertosModal>
-    </ParametrosCertosModal>
+    <ParametrosCertosModal> </ParametrosCertosModal>
   </div>
+  <GuiaRCPModal v-for="(g, i) in guias_rcp" :key="i" :modal="g" :index="i">
+  </GuiaRCPModal>
 </template>
 
 <script>
@@ -113,6 +114,7 @@ import axios from "axios";
 import { mapActions, mapMutations } from "vuex";
 import $ from "jquery";
 import ParametrosCertosModal from "@/components/ParametrosCertosModal.vue";
+import GuiaRCPModal from "@/components/GuiaRCPModal.vue";
 
 export default {
   name: "SlideOne",
@@ -132,6 +134,7 @@ export default {
       ],
       parametros_fisiologicos: [],
       perguntas: [],
+      guias_rcp: [],
       slider: null,
       titulos: [
         "Parâmetros Fisiológicos",
@@ -153,6 +156,7 @@ export default {
     ParametroFisiologicoModal,
     TrueFalseTable,
     ParametrosCertosModal,
+    GuiaRCPModal,
   },
 
   methods: {
@@ -163,6 +167,7 @@ export default {
           var data = res.data;
           this.parametros_fisiologicos = data.parametros_fisiologicos;
           this.perguntas = data.true_or_false;
+          this.guias_rcp = data.guias_rcp;
         })
         .catch((err) => console.log(err));
     },
@@ -184,6 +189,13 @@ export default {
   mounted() {
     this.$store.commit("setTitulos", this.titulos);
     this.setSwiperSettings();
+
+    $(document).on("click", "#escala2Modal .btn-proximo", function () {
+      $("#guiaRCPModal0").modal("show");
+    });
+    $(document).on("click", "#ncpUModal .btn-proximo", function () {
+      $("#guiaRCPModal1").modal("show");
+    });
   },
 };
 </script>
