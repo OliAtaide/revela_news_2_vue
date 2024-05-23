@@ -1,9 +1,9 @@
 <template>
   <div
     class="modal fade modal-resposta estudo-de-caso"
-    :id="'guiaRPCModal' + index"
+    :id="'guiaRCPModal' + index"
     tabindex="-1"
-    :aria-labelledby="'guiaRPCModal' + index + 'Label'"
+    :aria-labelledby="'guiaRCPModal' + index + 'Label'"
     aria-hidden="true"
   >
     <div class="modal-dialog modal-dialog-centered">
@@ -32,7 +32,7 @@
 
 <script>
 export default {
-  name: "GuiaRPCModal",
+  name: "GuiaRCPModal",
 
   props: ["modal", "index"],
 
