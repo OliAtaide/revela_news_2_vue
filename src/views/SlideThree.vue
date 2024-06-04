@@ -20,11 +20,12 @@
             <input
               title="NEWS2 TOTAL"
               type="number"
-              @input="(event) => (news2total = event.target.value)"
+              @input="(event) => iconeNews2Total(event.target.value)"
             />
           </div>
+          <i class="bi icone-resposta ms-3" id="iconeNews2Total"></i>
           <br />
-          <div class="btn btn-primary btn-enviar" @click="News2Total">
+          <div class="btn btn-primary btn-enviar" @click="News2Total()">
             ENVIAR
           </div>
         </div>
@@ -101,9 +102,18 @@ export default {
         })
         .catch((err) => console.log(err));
     },
+    iconeNews2Total(v) {
+      const icone = window.$("#iconeNews2Total");
+      if (v == 9) {
+        icone.removeClass("bi-x-circle");
+        icone.addClass("bi-check-circle");
+      } else {
+        icone.removeClass("bi-check-circle");
+        icone.addClass("bi-x-circle");
+      }
+    },
     News2Total() {
-      let isCorrect = this.news2total == 9;
-      $("#News2TotalModal" + (isCorrect ? 1 : 0)).modal("show");
+      $("#News2TotalModal0").modal("show");
     },
     ...mapMutations(["setTitulos"]),
     ...mapActions(["setSwiperSettings"]),

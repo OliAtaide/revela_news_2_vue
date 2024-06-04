@@ -22,6 +22,7 @@
           <button
             class="nav-item btn btn-primary btn-proximo"
             data-bs-dismiss="modal"
+            @click="nextModal()"
           >
             CONTINUAR
             <span class="mdi mdi-chevron-right"></span>
@@ -76,8 +77,16 @@
 </template>
 
 <script>
+import $ from 'jquery';
+
 export default {
   name: "News2TotalModal",
+
+  methods: {
+    nextModal(){
+      $('#News2TotalModal1').modal('show')
+    }
+  }
 
 };
 </script>
